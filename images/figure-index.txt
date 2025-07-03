@@ -1,0 +1,2 @@
+Figure, items, (radius/side), height, softness, solution, Total_time,exit_condition, container, conservation_constraints
+cube-0001-softness-95%-15-tetrahedra-volume-conservation,15, 1.28299,,0.95,solved,211.38.,Locally optimal solution found.,cube,volume

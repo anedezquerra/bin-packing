@@ -1,0 +1,11 @@
+# Núcleo numérico y manipulación de datos
+numpy>=1.22
+pandas>=1.5
+openpyxl>=3.1          # para leer Excel
+
+# Visualización 3D y exportación
+pyvista[qt]>=0.43      # PyVista + PyVistaQt + Qt bindings
+vtk>=9.2               # backend de renderizado
+imageio>=2.34          # captura de pantallas (PNG) cuando Pillow no está
+pillow>=10             # alternativa de backend para screenshot
+matplotlib>=3.8
