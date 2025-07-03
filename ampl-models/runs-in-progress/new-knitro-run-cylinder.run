@@ -1,0 +1,61 @@
+option knitro_options "\
+algorithm=3 \
+ms_enable=1 \
+ms_maxsolves=20 \
+feastol=1e-6 \
+opttol=1e-6 \
+honorbnds=1 \
+bar_initpt=3 \
+bar_murule=6 \
+scale=2 \
+outlev=4 \
+maxtime_real=1200 \
+maxit=5000 \
+bar_directinterval=50";
+
+
+solve;
+
+printf "---------------------------- NEOS Job Metadata ----------------------------\n";
+printf "NEOS Job ID: $neos_job\n";
+printf "Knitro Version: $knitro_version\n\n";
+
+printf "---------------------------- Solver Status Report ----------------------------\n";
+display solve_result_num, solve_result, solve_message;
+
+printf "\n---------------------------- Problem Dimensions ----------------------------\n";
+printf "Variables: %d\n", _nvars;
+printf "Constraints: %d\n", _ncons;
+
+printf "\n---------------------------- Performance Metrics ----------------------------\n";
+display _solve_elapsed_time, _total_solve_time, _ampl_elapsed_time;
+display _Knitro_iter, _Knitro_majorit, _Knitro_cgiter, _Knitro_evals;
+
+printf "\n---------------------------- Solution Geometry ----------------------------\n";
+display container_type, geometric_conservation, card(figures);
+display radius, height, softness;
+
+printf "\n---------------------------- Optimized Coordinates ----------------------------\n";
+param coords_fmt {i in figures, j in 1..3} := 
+    if abs(coords[i,j]) < 1e-6 then 0 else coords[i,j];
+    
+for {i in figures} {
+    printf "Figure %2d: (%8.4f, %8.4f, %8.4f)\n", 
+        i, coords_fmt[i,1], coords_fmt[i,2], coords_fmt[i,3];
+}
+
+printf "\n---------------------------- Inter-Figure Distances ----------------------------\n";
+param dist_matrix {i in figures, j in figures: i < j} := 
+    sqrt(sum{k in 1..3} (coords[i,k] - coords[j,k])^2);
+    
+for {i in figures, j in figures: i < j} {
+    printf "Distance between %2d and %2d: %8.4f\n", i, j, dist_matrix[i,j];
+}
+
+printf "\n---------------------------- Volume & Surface Metrics ----------------------------\n";
+display tetrahedron_volume, tetrahedron_surface_area;
+
+printf "\n---------------------------- Termination Conditions ----------------------------\n";
+display _Knitro_f, _Knitro_feaserr, _Knitro_optgap, _Knitro_compl;
+
+quit;
