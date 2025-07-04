@@ -9,7 +9,7 @@ bar_initpt=3 \
 bar_murule=4 \
 scale=1 \
 outlev=2 \
-maxtime_real=1200";
+maxtime_real=3600";
 
 
 

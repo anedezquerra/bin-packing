@@ -9,3 +9,4 @@ vtk>=9.2               # backend de renderizado
 imageio>=2.34          # captura de pantallas (PNG) cuando Pillow no está
 pillow>=10             # alternativa de backend para screenshot
 matplotlib>=3.8
+seaborn==0.13.2

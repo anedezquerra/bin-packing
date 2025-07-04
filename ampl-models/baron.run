@@ -1,0 +1,35 @@
+option solver baron;
+option baron_options 'epsa = 0.5 epsr = 0.8  prfreq = 50 filter maxtime = 120 maxiter = -1 Barstats keepsol wantsol= 4 threads= 4 nlpsol= 1';
+
+printf "---------------------------- Solution header data ----------------------------\n";
+solve;
+
+printf "---------------------------- Container and geometric considerations  ----------------------------\n";
+printf "Container type: %s\n", container_type;
+printf "Structural conservation type: %s\n", geometric_conservation;
+
+# Status info
+printf "---------------------------- Solution execution data ----------------------------\n";
+display solve_result_num, solve_result;
+
+# Data variables
+printf "---------------------------- Solution data ----------------------------\n";
+display card(figures), coords, radius, softness;
+
+printf "---------------------------- Solution coords data ----------------------------\n";
+display distances;
+   
+# Time stats
+printf "---------------------------- Solution stats data ----------------------------\n";
+display _ampl_time, _total_solve_time, _ampl_elapsed_time, _ampl_user_time;   
+
+printf "Total time elapsed: $%6.2f.\n", _total_solve_time;
+display _total_solve_time;
+
+printf "---------------------------- Solution miscs data ----------------------------\n";
+display tetrahedron_volume;
+
+printf "---------------------------- Solution miscs data ----------------------------\n";
+display tetrahedron_surface_area;
+
+quit;

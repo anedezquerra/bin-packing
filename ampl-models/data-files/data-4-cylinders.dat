@@ -1,12 +1,12 @@
 data;
 
-param n_figures := 100;
+param n_figures := 10;
 param n_points := 4;
 param n_dimensions := 3;
 
 param volume := 0.11785113020;
 param total_area := 1.7320508076;
-param softness := 0.99;
+param softness := 1.00;
 
 
 param container_type := 'cylinder';

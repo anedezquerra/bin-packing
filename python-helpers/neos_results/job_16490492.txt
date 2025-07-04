@@ -1,0 +1,110 @@
+Error at _cmdno 5 executing "solve" command
+(file amplin, line 1962, offset 37050):
+error processing param distances:
+	3200 invalid subscripts discarded:
+	distances[101,1,1]
+	distances[101,1,2]
+	distances[101,1,3]
+	and 3197 more.
+##### This license is only intended for use by NEOS. #####
+##### License is valid until Jan 16, 2026 #####
+iables.
+Substitution eliminates 1 variable.
+Adjusted problem:
+25953 variables:
+	16053 nonlinear variables
+	9900 linear variables
+52003 constraints; 313156 nonzeros
+	46250 nonlinear constraints
+	5753 linear constraints
+	5051 equality constraints
+	46952 inequality constraints
+1 nonlinear objective; 3 nonzeros.
+
+Artelys Knitro 14.2.0: threads=4
+algorithm=1
+ms_enable=1
+ms_maxsolves=10
+feastol=1e-5
+opttol=1e-5
+honorbnds=1
+bar_initpt=3
+bar_murule=4
+scale=1
+outlev=2
+maxtime_real=1200
+WARNING:  Option 'threads' is deprecated, please use 'numthreads'.
+WARNING: 1 constraint is constant or undefined and will be ignored.
+
+=======================================
+           Academic License
+       (NOT FOR COMMERCIAL USE)
+         Artelys Knitro 14.2.0
+=======================================
+
+No start point provided -- Knitro computing one.
+
+Knitro presolve eliminated 0 variables and 1 constraint.
+
+algorithm                1
+bar_initpt               3
+bar_murule               4
+concurrent_evals         0
+datacheck                0
+feastol                  1e-05
+findiff_numthreads       1
+hessian_no_f             1
+hessopt                  1
+honorbnds                1
+maxtime_real             1200
+ms_enable                1
+ms_maxsolves             10
+numthreads               4
+opttol                   1e-05
+
+Problem Characteristics                                 (   Presolved)
+-----------------------
+Objective goal:  Minimize
+Objective type:  general
+Number of variables:                              25953 (       25953)
+    bounded below only:                               1 (           1)
+    bounded above only:                               0 (           0)
+    bounded below and above:                          0 (           0)
+    fixed:                                            0 (           0)
+    free:                                         25952 (       25952)
+Number of constraints:                            52003 (       52002)
+    linear equalities:                                1 (           0)
+    quadratic equalities:                          4950 (        4950)
+    gen. nonlinear equalities:                      100 (         100)
+    linear one-sided inequalities:                 5752 (        5752)
+    quadratic one-sided inequalities:             41200 (       41200)
+    gen. nonlinear one-sided inequalities:            0 (           0)
+    linear two-sided inequalities:                    0 (           0)
+    quadratic two-sided inequalities:                 0 (           0)
+    gen. nonlinear two-sided inequalities:            0 (           0)
+Number of nonzeros in Jacobian:                  313156 (      313156)
+Number of nonzeros in Hessian:                   141453 (      141453)
+
+Knitro parallel multistart will run with 4 threads.
+
+Return codes description
+------------------------
+  0:  The final solution satisfies the termination conditions for verifying optimality.
+  -100 to -199:  A feasible approximate solution was found.
+  -200 to -299:  Knitro terminated at an infeasible point.
+  -300 to -301:  The problem was determined to be unbounded.
+  -400 to -499:  Knitro terminated because it reached a pre-defined limit.
+    -400 to -409:  A feasible point was found.
+    -410 to -419:  No feasible point was found.
+  -500 to -599:  Knitro terminated with an input error or some non-standard error.
+A more detailed description of individual return codes and their corresponding
+termination messages is provided at
+https://www.artelys.com/app/docs/knitro/3_referenceManual/returnCodes.html
+
+ Solve #  ThreadID  Status     Objective      FeasError    OptError    Real Time 
+--------  --------  ------  --------------   ----------   ----------  ----------
+      0          0       0         5.61152  4.71261e-06  2.45626e-05      2133.60
+
+ERROR: Your job was terminated because it exceeded the maximum allotted time for a job.
+
+Please refer to the NEOS Server FAQ (https://neos-guide.org/content/FAQ) for more information regarding job termination conditions and potential solutions.

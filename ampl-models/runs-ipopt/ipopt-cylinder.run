@@ -1,0 +1,55 @@
+#!/bin/sh
+# NEOS AMPL submission for IPOPT
+
+# Specify IPOPT as the solver
+option solver ipopt;
+# Set a few common IPOPT options; adjust as needed:
+option ipopt_options "\
+tol=1e-6 \
+constr_viol_tol=1e-6 \
+max_iter=10000 \
+";  # tighter tolerances, up to 10 000 iterations
+
+# Solve and dump the same outputs as before:
+solve;
+
+printf "---------------------------- Solution header data ----------------------------\n";
+solve;
+
+printf "---------------------------- Solver Status Report ----------------------------\n";
+display solve_result_num, solve_result, solve_message;
+
+printf "\n---------------------------- Problem Dimensions ----------------------------\n";
+printf "Variables: %d\n", _nvars;
+printf "Constraints: %d\n", _ncons;
+
+printf "---------------------------- Container and geometric considerations  ----------------------------\n";
+printf "Container type: %s\n", container_type;
+printf "Structural conservation type: %s\n", geometric_conservation;
+
+# Status info
+
+printf "---------------------------- Solution execution data ----------------------------\n";
+display solve_result_num, solve_result;
+
+# Data variables
+printf "---------------------------- Solution data ----------------------------\n";
+display card(figures), coords, radius, height, softness;
+
+printf "---------------------------- Solution coords data ----------------------------\n";
+display distances;
+   
+# Time stats
+printf "---------------------------- Solution stats data ----------------------------\n";
+display _ampl_time, _total_solve_time, _ampl_elapsed_time, _ampl_user_time;   
+
+printf "Total time elapsed: $%6.2f.\n", _total_solve_time;
+display _total_solve_time;
+
+printf "---------------------------- Solution miscs data ----------------------------\n";
+display tetrahedron_volume;
+
+printf "---------------------------- Solution miscs data ----------------------------\n";
+display tetrahedron_surface_area;
+
+quit;

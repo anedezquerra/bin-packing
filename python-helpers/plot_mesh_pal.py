@@ -164,6 +164,8 @@ def export_assets(job_id: str,
     glb_path  = GLTF_DIR / f"{job_id}.glb"
     obj_path  = OBJ_DIR  / f"{job_id}.obj"
     vtm_path  = VTM_DIR  / f"{job_id}.vtm"
+    
+    img_path_abs = img_path.resolve().as_posix()
 
     # 1) HTML interactivo
     plotter.export_html(str(html_path))
@@ -185,7 +187,7 @@ def export_assets(job_id: str,
     plotter.show(
         title=f"Job {job_id}",
         window_size=[1400, 1000],
-        screenshot=str(img_path)     # captura al cerrar la ventana
+        screenshot=img_path_abs     # captura al cerrar la ventana
     )
 
     # --- Log

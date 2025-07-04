@@ -1,0 +1,63 @@
+
+option solver knitro;
+
+# Opciones de Knitro:
+#  - algorithm=1      : Interior-point + SQP híbrido
+#  - ms_enable=1      : Multi-start
+#  - ms_maxsolves=10  : Hasta 10 reinicios
+#  - feastol/opttol   : Tolerancias de factibilidad y optimalidad
+#  - honorbnds=1      : Respetar cotas de variable
+#  - scale=1          : Escalamiento por defecto
+#  - maxtime_real     : Tiempo límite en segundos
+option knitro_options "\
+  algorithm=1 \
+  ms_enable=1 \
+  ms_maxsolves=10 \
+  feastol=1e-5 \
+  opttol=1e-5 \
+  honorbnds=1 \
+  scale=1 \
+  maxtime_real=1200 \
+  outlev=2 \
+";
+
+printf "---------------------------- Solution header data ----------------------------\n";
+solve;
+
+printf "---------------------------- Solver Status Report ----------------------------\n";
+display solve_result_num, solve_result, solve_message;
+
+printf "\n---------------------------- Problem Dimensions ----------------------------\n";
+printf "Variables: %d\n", _nvars;
+printf "Constraints: %d\n", _ncons;
+
+printf "---------------------------- Container and geometric considerations  ----------------------------\n";
+printf "Container type: %s\n", container_type;
+printf "Structural conservation type: %s\n", geometric_conservation;
+
+# Status info
+
+printf "---------------------------- Solution execution data ----------------------------\n";
+display solve_result_num, solve_result;
+
+# Data variables
+printf "---------------------------- Solution data ----------------------------\n";
+display card(figures), coords, radius, height, softness;
+
+printf "---------------------------- Solution coords data ----------------------------\n";
+display distances;
+   
+# Time stats
+printf "---------------------------- Solution stats data ----------------------------\n";
+display _ampl_time, _total_solve_time, _ampl_elapsed_time, _ampl_user_time;   
+
+printf "Total time elapsed: $%6.2f.\n", _total_solve_time;
+display _total_solve_time;
+
+printf "---------------------------- Solution miscs data ----------------------------\n";
+display tetrahedron_volume;
+
+printf "---------------------------- Solution miscs data ----------------------------\n";
+display tetrahedron_surface_area;
+
+quit;

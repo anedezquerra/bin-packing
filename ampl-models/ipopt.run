@@ -1,0 +1,20 @@
+#!/bin/sh
+# NEOS AMPL submission for IPOPT
+
+# Indicar que usamos IPOPT
+option solver ipopt;
+
+# Opciones de IPOPT:
+#  - tol               : Tolerancia en el gradiente del Lagrangiano
+#  - constr_viol_tol   : Tolerancia en violación de restricciones
+#  - max_iter          : Límite de iteraciones
+option ipopt_options "\
+  tol=1e-6 \
+  constr_viol_tol=1e-6 \
+  max_iter=10000 \
+  print_level=5 \
+";
+
+# Ejecutar y mostrar resultados
+solve;
+display _solve_majr, _solve_minr;
