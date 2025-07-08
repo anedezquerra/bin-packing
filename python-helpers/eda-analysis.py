@@ -119,7 +119,7 @@ def plot_heatmap_softness_vs_figures(df: pd.DataFrame, output_folder: str):
 
 def main():
     # Ruta local
-    xlsx_path = "test.xlsx"
+    xlsx_path = "artifacts/results.xlsx"
     output_folder = "figures"
 
     df = load_data(xlsx_path)

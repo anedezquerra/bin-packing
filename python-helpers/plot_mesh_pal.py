@@ -40,6 +40,21 @@ for d in (HTML_DIR, IMG_DIR, GLTF_DIR, OBJ_DIR, VTM_DIR):
 
 
 # ---------------------- Utilidades de carga --------------------------------
+
+def load_palettes() -> dict:
+    """Load color palettes from JSON file"""
+    palette_file = pathlib.Path(__file__).parent / "palettes.json"
+    try:
+        with palette_file.open(encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        warnings.warn("palettes.json not found, using default palettes")
+        return {}
+    except json.JSONDecodeError:
+        warnings.warn("Invalid palettes.json, using default palettes")
+        return {}
+
+
 def load_record(job_id: str) -> dict:
     if not RESULTS_JSON.exists():
         sys.exit(f"❌ Falta {RESULTS_JSON}")
@@ -74,7 +89,7 @@ def build_scene(record: dict,
     las exportaciones 3D.
     """
     pv.global_theme.smooth_shading = True
-    plotter = pv.Plotter()
+    plotter = pv.Plotter(off_screen=True)
     plotter.set_background("white")
 
     # -------- Contenedor ----------------------------------------------------
@@ -111,29 +126,57 @@ def build_scene(record: dict,
     else:
         warnings.warn("Contenedor no reconocido o faltan datos; sólo se mostrará la malla.")
 
-    # -------- Colores por tetraedro ----------------------------------------
+    # -------- Cargar paletas desde config/palettes.json ---------------------
+    # Define la ruta al archivo de paletas en el directorio config
+    config_dir = pathlib.Path(__file__).parent / "config"
+    PALETTES_JSON = config_dir / "palettes.json"
+    
+    # Carga las paletas desde JSON si existe el archivo
+    palette_data = {}
+    if PALETTES_JSON.exists():
+        try:
+            with PALETTES_JSON.open(encoding="utf-8") as f:
+                palette_data = json.load(f)
+        except json.JSONDecodeError:
+            warnings.warn(f"Error al decodificar {PALETTES_JSON}; usando paleta por defecto")
+    else:
+        warnings.warn(f"Archivo de paletas no encontrado en {PALETTES_JSON}; usando paletas incorporadas")
+    
+    # -------- Preparar colores para tetraedros -------------------------------
     unique_tets = sorted(df["tetra"].unique())
     num_tets    = len(unique_tets)
-
-    try:
-        cmap = mpl.colormaps.get_cmap(palette)
-    except ValueError:
-        warnings.warn(f"Paleta '{palette}' no encontrada; se usa 'tab20'.")
-        cmap = mpl.colormaps.get_cmap("tab20")
-
-    # Resample para obtener n colores
-    if hasattr(cmap, "resampled"):
-        cmap = cmap.resampled(num_tets)
-        colors_array = cmap(range(num_tets))
-    else:  # versión < 3.5
+    
+    # Seleccionar mapa de colores
+    if palette in palette_data:
+        # Usar paleta personalizada desde JSON
+        colors_list = palette_data[palette]
+        # Crear colormap lineal con los colores especificados
+        cmap = mcolors.LinearSegmentedColormap.from_list(palette, colors_list)
+        # Generar colores igualmente espaciados
         colors_array = cmap(np.linspace(0, 1, num_tets))
-
+        
+    elif palette in mpl.colormaps:
+        # Usar paleta incorporada de Matplotlib
+        cmap = mpl.colormaps[palette]
+        # Muestrear la paleta para obtener colores distintos
+        if hasattr(cmap, "resampled"):
+            cmap = cmap.resampled(num_tets)
+            colors_array = cmap(range(num_tets))
+        else:
+            colors_array = cmap(np.linspace(0, 1, num_tets))
+    else:
+        # Paleta por defecto si no se encuentra
+        warnings.warn(f"Paleta '{palette}' no encontrada; usando 'tab20'")
+        cmap = mpl.colormaps["tab20"]
+        colors_array = cmap(range(num_tets)) if hasattr(cmap, "resampled") else cmap(np.linspace(0, 1, num_tets))
+    
+    # Mapear colores a los tetraedros
     color_by_tet = {
         tet_id: mcolors.to_hex(colors_array[i])
         for i, tet_id in enumerate(unique_tets)
     }
 
-    # -------- Tetraedros ----------------------------------------------------
+    # -------- Crear tetraedros -----------------------------------------------
     for tet_id, group in df.groupby("tetra"):
         verts = group.sort_values("vertex")[["x", "y", "z"]].values[:4]
         cells = np.hstack([[4, 0, 1, 2, 3]]).astype(np.int64)
@@ -183,13 +226,10 @@ def export_assets(job_id: str,
     # 4) VTM multiblock
     pv.MultiBlock(surfaces).save(str(vtm_path))
 
-    # 5) Mostrar escena y capturar PNG
-    plotter.show(
-        title=f"Job {job_id}",
-        window_size=[1400, 1000],
-        screenshot=img_path_abs     # captura al cerrar la ventana
-    )
-
+    # 5) Capturar PNG sin mostrar ventana
+    plotter.off_screen = True
+    img = plotter.screenshot(img_path_abs, window_size=[1400, 1000])
+    
     # --- Log
     print(f"✓ HTML  → {html_path}")
     print(f"✓ PNG   → {img_path}")
@@ -197,8 +237,10 @@ def export_assets(job_id: str,
     print(f"✓ OBJ   → {obj_path}")
     print(f"✓ VTM   → {vtm_path}")
 
+    return img  # Return screenshot for potential use
 
-# ------------------------------ CLI ----------------------------------------
+
+# Modify main function to handle visualization separately
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Renderiza malla y contenedor, exportando múltiples formatos."
@@ -207,17 +249,27 @@ def main() -> None:
                         help="Identificador del job en artifacts/results.json")
     parser.add_argument("-p", "--pal", default="tab20",
                         help="Nombre de la paleta Matplotlib (p. ej. Blues, pink, hsv...)")
+    parser.add_argument("--show", action="store_true",
+                        help="Mostrar visualización interactiva")
     args = parser.parse_args()
 
     job_id  = str(args.job_id)
     palette = args.pal
+    show_flag = args.show
 
     record = load_record(job_id)
     df     = load_mesh_dataframe(job_id)
 
-    plotter, surfaces = build_scene(record, df, palette=palette)
-    export_assets(job_id, plotter, surfaces)
+    # Build plotter for exports (off-screen)
+    plotter_export, surfaces = build_scene(record, df, palette=palette)
+    plotter_export.off_screen = True
+    screenshot = export_assets(job_id, plotter_export, surfaces)
 
+    # Show interactive visualization if requested
+    if show_flag:
+        # Create new plotter for interactive session
+        plotter_show, _ = build_scene(record, df, palette=palette)
+        plotter_show.show(title=f"Job {job_id}", window_size=[1400, 1000])
 
 if __name__ == "__main__":
     main()

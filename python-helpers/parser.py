@@ -230,6 +230,8 @@ if __name__ == '__main__':
         ]
     )
 
+    job_list = list(set(job_list))
+    
 
     # Folder to save results
     output_folder = "neos_results"

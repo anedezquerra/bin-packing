@@ -1,0 +1,10 @@
+
+amplin, line 141 (offset 4903):
+	expected ; 
+context:  param softness := 0 >>> , <<< 95;
+ for knitro_options...
+Executing AMPL.
+processing data.
+processing commands.
+Executing on prod-exec-5.neos-server.org
+ Error (2) in /opt/ampl/ampl -R amplin

@@ -1,6 +1,6 @@
 data;
 
-param n_figures := 10;
+param n_figures := 50;
 param n_points := 4;
 param n_dimensions := 3;
 
@@ -10,8 +10,7 @@ param softness := 1.00;
 
 
 param container_type := 'cylinder';
-param geometric_conservation := 'volume';
-
+param geometric_conservation := 'volume & surface';
 
 param distances :=
 [1,*,*]:			1		2		3		4 :=
