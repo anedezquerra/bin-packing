@@ -1,30 +1,32 @@
+# Set BARON as the solver
 option solver baron;
-option baron_options 'epsa = 0.5 epsr = 0.8  prfreq = 50 filter maxtime = 120 maxiter = -1 Barstats keepsol wantsol= 4 threads= 4 nlpsol= 1';
 
+# Configure BARON options for complex instance solving
+# option baron_options 'epsa=1e-5 epsr=1e-4 prfreq=50 maxiter=-1 maxtime=3600 filter Barstats keepsol wantsol=4 threads=4 nlpsol=2';
+option baron_options 'maxtime=10800 keepsol threads=2 deltat=1200 deltaa=1e-6 deltar=1e-6 deltaterm=1 epsr=1e-6 epsa=1e-6 nlpsol=8 lsolver=knitro';
+
+
+
+# Solve the model
 printf "---------------------------- Solution header data ----------------------------\n";
 solve;
 
-printf "---------------------------- Container and geometric considerations  ----------------------------\n";
+printf "---------------------------- Container and geometric considerations ----------------------------\n";
 printf "Container type: %s\n", container_type;
 printf "Structural conservation type: %s\n", geometric_conservation;
 
-# Status info
 printf "---------------------------- Solution execution data ----------------------------\n";
 display solve_result_num, solve_result;
 
-# Data variables
 printf "---------------------------- Solution data ----------------------------\n";
 display card(figures), coords, radius, softness;
 
 printf "---------------------------- Solution coords data ----------------------------\n";
 display distances;
-   
-# Time stats
-printf "---------------------------- Solution stats data ----------------------------\n";
-display _ampl_time, _total_solve_time, _ampl_elapsed_time, _ampl_user_time;   
 
+printf "---------------------------- Solution stats data ----------------------------\n";
+display _ampl_time, _total_solve_time, _ampl_elapsed_time, _ampl_user_time;
 printf "Total time elapsed: $%6.2f.\n", _total_solve_time;
-display _total_solve_time;
 
 printf "---------------------------- Solution miscs data ----------------------------\n";
 display tetrahedron_volume;

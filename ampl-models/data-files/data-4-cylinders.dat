@@ -1,6 +1,6 @@
 data;
 
-param n_figures := 50;
+param n_figures := 125;
 param n_points := 4;
 param n_dimensions := 3;
 

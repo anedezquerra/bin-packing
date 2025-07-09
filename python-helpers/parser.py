@@ -22,6 +22,8 @@ from dateutil import parser as date_parser
 import pandas as pd
 
 
+from tqdm import tqdm
+
 ARTIFACTS_DIR      = pathlib.Path("artifacts")
 RESULTS_JSON_PATH  = ARTIFACTS_DIR / "results.json"
 MESH_FOLDER        = ARTIFACTS_DIR / "meshes"
@@ -230,17 +232,15 @@ if __name__ == '__main__':
         ]
     )
 
-    job_list = list(set(job_list))
-    
-
     # Folder to save results
     output_folder = "neos_results"
     os.makedirs(output_folder, exist_ok=True)    
-
+    count = 0
+    good_files = 0
     if job_list:
         for job_number, job_password in job_list:
             print(f"Retrieving results for Job #{job_number}...")
-
+            count += 1
             try:
                 # Check job status
                 status = neos.getJobStatus(job_number, job_password)
@@ -249,6 +249,7 @@ if __name__ == '__main__':
                     continue
                 else:
                     # Get final results
+                    good_files += 1
                     result_bytes = neos.getFinalResults(job_number, job_password)
                     result_text = result_bytes.data.decode("utf-8")
 
@@ -263,3 +264,5 @@ if __name__ == '__main__':
                 
             except Exception as e:
                 print(f"Error retrieving Job #{job_number}: {e}")
+                
+    print(count, good_files)

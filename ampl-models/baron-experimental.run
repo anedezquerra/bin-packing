@@ -1,0 +1,73 @@
+# ====================== BARON SOLVER CONFIGURATION ======================
+option solver baron;
+
+# Configure advanced BARON options for complex tetrahedral packing
+option baron_options 'maxtime=-1 threads=2 deltat=1200 deltaa=1e-6 deltar=1e-6 deltaterm=1 epsr=1e-6 epsa=1e-6 nlpsol=8 lsolver=knitro barstats outlev=1 prtime=30';
+
+# ====================== SOLUTION EXECUTION ======================
+solve;
+
+# ====================== SOLUTION REPORTING ======================
+printf "\n---------------------------- SOLVER STATUS ----------------------------\n";
+printf "Solver result: %s (%d)\n", solve_result, solve_result_num;
+printf "Solve time: %.2f seconds\n", _solve_time;
+
+printf "\n---------------------------- CONTAINER SUMMARY ----------------------------\n";
+printf "Container type: %s\n", container_type;
+printf "Minimized side length: %.6f\n", side;
+printf "Center coordinates: (20, 20, 20)\n";
+printf "Bounding box: [%.4f, %.4f] x [%.4f, %.4f] x [%.4f, %.4f]\n", 
+    20 - side/2, 20 + side/2, 
+    20 - side/2, 20 + side/2,
+    20 - side/2, 20 + side/2;
+
+printf "\n---------------------------- GEOMETRIC PROPERTIES ----------------------------\n";
+printf "Conservation type: %s\n", geometric_conservation;
+printf "Softness parameter: %.2e\n", softness;
+
+printf "\n---------------------------- VOLUME VALIDATION ----------------------------\n";
+for {i in figures} {
+    printf "Tetrahedron %2d: Volume = %.6f (Target = %.6f)", 
+        i, tetrahedron_volume[i], volume;
+    if abs(tetrahedron_volume[i] - volume) < 1e-6 then
+        printf "  PASS\n";
+    else
+        printf "  DEVIATION: %.2e\n", abs(tetrahedron_volume[i] - volume);
+}
+
+printf "\n---------------------------- SURFACE AREA VALIDATION ----------------------------\n";
+for {i in figures} {
+    printf "Tetrahedron %2d: Surface Area = %.6f (Target = %.6f)", 
+        i, tetrahedron_surface_area[i], total_area;
+    if abs(tetrahedron_surface_area[i] - total_area) < 1e-6 then
+        printf "  PASS\n";
+    else
+        printf "  DEVIATION: %.2e\n", abs(tetrahedron_surface_area[i] - total_area);
+}
+
+printf "\n---------------------------- COORDINATE OUTPUT ----------------------------\n";
+for {i in figures} {
+    printf "Tetrahedron %d:\n", i;
+    for {j in points} {
+        printf "  Point %d: (%.6f, %.6f, %.6f)\n", 
+            j, coords[i,j,1], coords[i,j,2], coords[i,j,3];
+    }
+}
+
+printf "\n---------------------------- DISTANCE VALIDATION ----------------------------\n";
+param max_dev default 0;
+for {i in figures, p1 in points, p2 in points: p2 > p1} {
+    param actual_dist := sqrt(sum{n in dimensions} (coords[i,p1,n] - coords[i,p2,n])^2);
+    param dev := abs(actual_dist - distances[i,p1,p2]) / max(distances[i,p1,p2], 1e-6);
+    let max_dev := max(max_dev, dev);
+    printf "T%d P%d-P%d: Actual=%.6f  Target=%.6f  Dev=%.2e%s\n", 
+        i, p1, p2, actual_dist, distances[i,p1,p2], dev,
+        if dev > softness then "  ⚠️" else "";
+}
+printf "Maximum distance deviation: %.2e (Softness=%.2e)\n", max_dev, softness;
+
+printf "\n---------------------------- PERFORMANCE METRICS ----------------------------\n";
+printf "Total AMPL time: %.2f seconds\n", _ampl_time;
+printf "Total solve time: %.2f seconds\n", _total_solve_time;
+printf "Elapsed time: %.2f seconds\n", _ampl_elapsed_time;
+printf "User CPU time: %.2f seconds\n", _ampl_user_time;

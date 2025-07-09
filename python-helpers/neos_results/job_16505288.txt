@@ -1,0 +1,2183 @@
+Error at _cmdno 6 executing "solve" command
+(file amplin, line 2364, offset 54294):
+error processing param distances:
+	2800 invalid subscripts discarded:
+	distances[126,1,1]
+	distances[126,1,2]
+	distances[126,1,3]
+	and 2797 more.
+##### This license is only intended for use by NEOS. #####
+##### License is valid until Jan 16, 2026 #####
+OMP: Warning #96: Cannot form a team with 16 threads, using 1 instead.
+OMP: Hint Consider unsetting KMP_DEVICE_THREAD_LIMIT (KMP_ALL_THREADS), KMP_TEAMS_THREAD_LIMIT, and OMP_THREAD_LIMIT (if any are set).
+##### This license is only intended for use by NEOS. #####
+##### License is valid until Jan 16, 2026 #####
+OMP: Warning #96: Cannot form a team with 16 threads, using 1 instead.
+OMP: Hint Consider unsetting KMP_DEVICE_THREAD_LIMIT (KMP_ALL_THREADS), KMP_TEAMS_THREAD_LIMIT, and OMP_THREAD_LIMIT (if any are set).
+##### This license is only intended for use by NEOS. #####
+##### License is valid until Jan 16, 2026 #####
+OMP: Warning #96: Cannot form a team with 16 threads, using 1 instead.
+OMP: Hint Consider unsetting KMP_DEVICE_THREAD_LIMIT (KMP_ALL_THREADS), KMP_TEAMS_THREAD_LIMIT, and OMP_THREAD_LIMIT (if any are set).
+##### This license is only intended for use by NEOS. #####
+##### License is valid until Jan 16, 2026 #####
+OMP: Warning #96: Cannot form a team with 16 threads, using 1 instead.
+OMP: Hint Consider unsetting KMP_DEVICE_THREAD_LIMIT (KMP_ALL_THREADS), KMP_TEAMS_THREAD_LIMIT, and OMP_THREAD_LIMIT (if any are set).
+##### This license is only intended for use by NEOS. #####
+##### License is valid until Jan 16, 2026 #####
+OMP: Warning #96: Cannot form a team with 16 threads, using 1 instead.
+OMP: Hint Consider unsetting KMP_DEVICE_THREAD_LIMIT (KMP_ALL_THREADS), KMP_TEAMS_THREAD_LIMIT, and OMP_THREAD_LIMIT (if any are set).
+##### This license is only intended for use by NEOS. #####
+##### License is valid until Jan 16, 2026 #####
+OMP: Warning #96: Cannot form a team with 16 threads, using 1 instead.
+OMP: Hint Consider unsetting KMP_DEVICE_THREAD_LIMIT (KMP_ALL_THREADS), KMP_TEAMS_THREAD_LIMIT, and OMP_THREAD_LIMIT (if any are set).
+inequalities:             63500 (       63500)
+    gen. nonlinear one-sided inequalities:            0 (           0)
+    linear two-sided inequalities:                    0 (           0)
+    quadratic two-sided inequalities:                 0 (           0)
+    gen. nonlinear two-sided inequalities:            0 (           0)
+Number of nonzeros in Jacobian:                  489250 (      489250)
+Number of nonzeros in Hessian:                   219000 (      219000)
+
+Knitro using the Interior-Point/Barrier Direct algorithm.
+
+  Iter      Objective      FeasError   OptError    ||Step||    CGits 
+--------  --------------  ----------  ----------  ----------  -------
+       0    0.000000e+00   1.306e+00
+      10    1.218370e+01   2.002e+00   8.930e-01   9.996e+00        3
+      20    1.291948e+01   4.213e-03   2.983e-01   2.030e-01        0
+      30    1.245863e+01   1.982e-03   2.183e-02   8.642e-02        0
+      40    1.382455e+01   3.322e-04   2.121e-02   1.008e+00        0
+      48    1.383856e+01   9.576e-16   2.122e-02   4.384e-12        0
+
+EXIT: Primal feasible solution; terminate because the relative change in
+      solution estimate < xtol for 3 consecutive iterations.
+
+HINT: Knitro terminated at a feasible point with objective value=1.383856e+01,
+      but had previously found a feasible point during the optimization with
+      a lower objective value=1.241004e+01 (with feasibility error=2.39e-07).
+      Use API function KN_get_best_feasible_iterate to retrieve this iterate
+      or set user option soltype=1 (bestfeas).
+
+HINT: For large problems, one of the parallel linear solvers available in 
+      Knitro (e.g., linsolver=6, 7, or 8) may improve performance.
+
+Final Statistics
+----------------
+Final objective value               =   1.38385613513977e+01
+Final feasibility error (abs / rel) =   9.58e-16 / 7.33e-16
+Final optimality error  (abs / rel) =   2.12e-02 / 2.12e-02
+# of iterations                     =         48 
+# of CG iterations                  =         15 
+# of function evaluations           =         52
+# of gradient evaluations           =         50
+# of Hessian evaluations            =         48
+Total program time (secs)           =      90.03474 (    88.934 CPU time)
+Time spent in evaluations (secs)    =       7.20237
+
+===============================================================================
+
+
+=======================================
+           Academic License
+       (NOT FOR COMMERCIAL USE)
+         Artelys Knitro 14.2.0
+=======================================
+
+Knitro using up to 16 threads.
+Knitro presolve eliminated 0 variables and 0 constraints.
+
+concurrent_evals         0
+datacheck                0
+findiff_numthreads       1
+hessian_no_f             1
+hessopt                  1
+
+Problem Characteristics                                 (   Presolved)
+-----------------------
+Objective goal:  Minimize
+Objective type:  linear
+Number of variables:                              40251 (       40251)
+    bounded below only:                               0 (           0)
+    bounded above only:                               0 (           1)
+    bounded below and above:                      40251 (       40250)
+    fixed:                                            0 (           0)
+    free:                                             0 (           0)
+Number of constraints:                            82125 (       82125)
+    linear equalities:                                0 (           0)
+    quadratic equalities:                          7750 (        7750)
+    gen. nonlinear equalities:                      125 (         125)
+    linear one-sided inequalities:                10750 (       10750)
+    quadratic one-sided inequalities:             63500 (       63500)
+    gen. nonlinear one-sided inequalities:            0 (           0)
+    linear two-sided inequalities:                    0 (           0)
+    quadratic two-sided inequalities:                 0 (           0)
+    gen. nonlinear two-sided inequalities:            0 (           0)
+Number of nonzeros in Jacobian:                  489250 (      489250)
+Number of nonzeros in Hessian:                   219000 (      219000)
+
+Knitro using the Interior-Point/Barrier Direct algorithm.
+
+  Iter      Objective      FeasError   OptError    ||Step||    CGits 
+--------  --------------  ----------  ----------  ----------  -------
+       0    0.000000e+00   1.000e+00
+      10    2.406634e+00   1.149e+01   1.453e+03   1.996e+01        1
+      20    8.178702e+01   2.941e+01   8.758e+02   3.766e+01        0
+      30    1.730670e+02   1.636e+01   4.104e+02   8.330e+01        0
+      40    1.971223e+02   1.718e+01   4.315e-01   6.756e+01        0
+      50    1.988222e+02   1.723e+01   4.651e-01   2.208e+01        0
+      60    2.018025e+02   1.732e+01   2.867e-01   5.100e+01        0
+      70    2.097031e+02   1.139e+01   2.993e-01   1.182e+02        0
+      80    2.328966e+02   1.393e+00   3.694e-01   2.975e+01        0
+      90    2.779056e+02   8.436e-01   4.603e-01   1.227e+01        0
+     100    3.107770e+02   5.679e-01   5.171e-01   3.228e+00        0
+     110    3.258215e+02   2.624e-01   9.078e-01   2.156e-01        0
+     120    3.594432e+02   1.126e-01   9.164e-01   4.121e-01        0
+     130    4.620349e+02   6.525e+00   9.744e-01   3.353e+00        0
+     140    1.721051e+02   2.557e-03   9.744e-01   4.180e+00        1
+     150    1.701260e+02   5.888e-08   9.744e-01   3.203e-03        0
+     160    1.700753e+02   5.512e-07   9.744e-01   8.625e-03        0
+     170    1.699673e+02   3.052e-05   9.744e-01   6.368e-02        0
+     180    1.699289e+02   1.187e-07   9.744e-01   4.346e-03        0
+     190    1.698258e+02   2.449e-08   9.744e-01   2.111e-03        0
+     200    1.697733e+02   2.563e-06   9.744e-01   4.594e-04        0
+     210    1.697253e+02   4.158e-07   9.744e-01   7.545e-03        0
+     220    1.696544e+02   4.025e-06   9.744e-01   2.294e-02        0
+     230    1.695890e+02   1.296e-07   9.744e-01   4.154e-03        0
+     240    1.695409e+02   1.070e-09   9.744e-01   8.320e-05        0
+     250    1.657293e+02   1.662e-11   9.744e-01   4.601e-06        0
+     254    1.657293e+02   2.082e-15   9.744e-01   1.015e-11        0
+
+EXIT: Primal feasible solution; terminate because the relative change in
+      solution estimate < xtol for 3 consecutive iterations.
+
+HINT: For large problems, one of the parallel linear solvers available in 
+      Knitro (e.g., linsolver=6, 7, or 8) may improve performance.
+
+Final Statistics
+----------------
+Final objective value               =   1.65729322780696e+02
+Final feasibility error (abs / rel) =   2.08e-15 / 2.08e-15
+Final optimality error  (abs / rel) =   9.74e-01 / 9.74e-01
+# of iterations                     =        254 
+# of CG iterations                  =         86 
+# of function evaluations           =        259
+# of gradient evaluations           =        256
+# of Hessian evaluations            =        255
+Total program time (secs)           =     254.19925 (   251.707 CPU time)
+Time spent in evaluations (secs)    =      29.00261
+
+===============================================================================
+
+
+=======================================
+           Academic License
+       (NOT FOR COMMERCIAL USE)
+         Artelys Knitro 14.2.0
+=======================================
+
+Knitro using up to 16 threads.
+Knitro presolve eliminated 0 variables and 0 constraints.
+
+concurrent_evals         0
+datacheck                0
+findiff_numthreads       1
+hessian_no_f             1
+hessopt                  1
+
+Problem Characteristics                                 (   Presolved)
+-----------------------
+Objective goal:  Minimize
+Objective type:  linear
+Number of variables:                              40251 (       40251)
+    bounded below only:                               0 (           0)
+    bounded above only:                               0 (           1)
+    bounded below and above:                      40251 (       40250)
+    fixed:                                            0 (           0)
+    free:                                             0 (           0)
+Number of constraints:                            82125 (       82125)
+    linear equalities:                                0 (           0)
+    quadratic equalities:                          7750 (        7750)
+    gen. nonlinear equalities:                      125 (         125)
+    linear one-sided inequalities:                10750 (       10750)
+    quadratic one-sided inequalities:             63500 (       63500)
+    gen. nonlinear one-sided inequalities:            0 (           0)
+    linear two-sided inequalities:                    0 (           0)
+    quadratic two-sided inequalities:                 0 (           0)
+    gen. nonlinear two-sided inequalities:            0 (           0)
+Number of nonzeros in Jacobian:                  489250 (      489250)
+Number of nonzeros in Hessian:                   219000 (      219000)
+
+Knitro using the Interior-Point/Barrier Direct algorithm.
+
+  Iter      Objective      FeasError   OptError    ||Step||    CGits 
+--------  --------------  ----------  ----------  ----------  -------
+       0   -3.883610e+00   1.874e+02
+      10    1.622405e+01   6.238e+01   1.189e+02   1.045e+02        1
+      20    1.552514e+02   3.189e+01   1.333e+00   1.749e+02        1
+      30    4.074276e+02   1.058e+02   1.430e+07   1.431e+01        0
+      40    8.072012e+02   4.178e+01   6.268e+05   1.999e+02        0
+      50    1.184067e+03   6.160e+01   1.918e+00   2.617e+02        2
+      60    1.414993e+03   9.669e+01   9.913e-01   1.526e+02        2
+      70    1.736492e+03   8.768e+01   9.967e-01   6.526e+02        1
+      80    1.948724e+03   2.211e+02   9.975e-01   2.266e+02        2
+      90    2.455148e+03   1.476e+02   9.979e-01   9.239e+02        2
+     100    3.003406e+03   1.949e+02   1.467e+00   1.202e+02        3
+     110    3.317215e+03   1.296e+02   9.784e-01   2.104e+01        8
+     120    3.319598e+03   7.865e+01   3.322e+00   3.189e+01        0
+     130    3.324100e+03   7.711e+00   9.997e-01   2.540e+01       17
+     140    3.358166e+03   3.728e-11   9.808e-01   1.137e+00        0
+     150    1.302485e+03   1.926e-02   9.808e-01   5.109e+00        1
+     160    1.287213e+03   5.757e-08   9.808e-01   9.093e-04        0
+     170    1.287135e+03   1.503e-14   9.808e-01   1.775e-09        0
+     180    1.287135e+03   1.892e-14   9.808e-01   3.981e-11        0
+     190    1.286840e+03   2.768e-12   4.332e-01   2.003e-06        0
+     200    1.286840e+03   1.500e-14   4.332e-01   2.849e-10        0
+     210    1.286840e+03   1.527e-14   4.332e-01   6.690e-10        0
+     220    1.286833e+03   1.627e-02   4.332e-01   7.235e-01        1
+     230    1.286673e+03   1.271e-14   4.332e-01   4.369e-10        0
+     240    1.286673e+03   3.746e-14   4.332e-01   6.355e-06        0
+     250    1.286673e+03   1.511e-14   4.332e-01   4.940e-10        0
+     260    1.282320e+03   1.546e-02   4.332e-01   1.189e+01        1
+     270    1.298328e+03   1.656e-03   1.092e+00   2.540e+01        0
+     280    1.634923e+03   9.722e-02   9.984e-01   3.939e+02        0
+     290    1.944722e+03   2.095e-04   9.996e-01   1.112e+02        0
+     300    5.365654e+03   9.133e-01   1.000e+00   3.777e+02        4
+     310    5.373812e+03   5.382e-03   1.000e+00   1.095e+01        2
+     320    5.336427e+03   2.686e-02   9.927e-01   3.725e+01        0
+     330    2.702257e+03   4.355e-02   9.927e-01   7.933e+00        1
+     340    2.697161e+03   2.202e-06   9.927e-01   2.185e-02        0
+     350    2.583699e+03   8.334e-02   9.927e-01   2.958e+00        0
+     360    2.583744e+03   2.892e-11   9.906e-01   4.740e-05        0
+     370    2.583731e+03   2.828e-14   9.906e-01   2.648e-07        0
+     380    2.583691e+03   3.522e-14   9.906e-01   1.127e-07        0
+     390    2.583684e+03   2.974e-14   9.906e-01   3.730e-08        0
+     400    2.583683e+03   4.204e-14   9.906e-01   2.470e-09        0
+     410    2.583683e+03   2.838e-14   9.906e-01   7.089e-10        0
+     420    2.583553e+03   6.855e-11   9.906e-01   7.485e-05        0
+     430    2.583609e+03   7.411e-06   9.906e-01   3.515e-02        1
+     440    2.538729e+03   1.624e-03   7.615e-01   2.068e+01        1
+     450    2.515930e+03   1.007e-02   4.581e-01   2.481e-02        0
+     460    2.500499e+03   1.115e-02   6.085e-01   1.555e+01        1
+     470    2.474421e+03   1.990e-03   6.358e-01   1.809e+01        1
+     480    2.441525e+03   5.957e-04   7.940e-01   3.212e+01        1
+     490    2.409555e+03   4.111e-02   8.374e-01   3.948e+01        1
+     500    2.391270e+03   4.578e-01   8.508e-01   9.035e-01        1
+     510    2.373219e+03   8.056e-04   2.772e-01   2.826e+01        1
+     520    2.331221e+03   4.079e-02   2.772e-01   4.309e+01        1
+     530    2.298997e+03   1.870e-02   2.772e-01   4.327e+01        1
+     540    2.250646e+03   1.159e-02   2.772e-01   5.187e+01        1
+     550    2.201223e+03   5.596e-03   2.772e-01   4.953e+01        1
+     560    2.151871e+03   4.090e-03   2.772e-01   3.961e-09        0
+     570    2.088785e+03   9.147e-03   2.772e-01   3.850e+01        1
+     580    2.044511e+03   1.743e-02   2.772e-01   5.716e+01        1
+     590    1.986398e+03   6.446e-02   2.772e-01   6.434e+01        1
+     600    1.930590e+03   3.838e-02   2.754e-01   5.212e+01        1
+     610    1.882612e+03   1.466e-04   2.754e-01   7.612e+01        1
+     620    1.834543e+03   6.220e-03   2.754e-01   4.158e+01        1
+     630    1.773304e+03   6.191e-03   2.754e-01   2.121e+00        1
+     640    1.722895e+03   7.144e-03   2.754e-01   4.810e-11        0
+     650    1.666499e+03   9.588e-01   2.754e-01   7.574e+01        1
+     660    1.636377e+03   8.410e-01   2.754e-01   5.466e+01        1
+     670    1.596191e+03   1.485e+00   2.754e-01   4.243e+01        1
+     680    1.586189e+03   4.656e-01   2.754e-01   2.693e-01        2
+     690    1.558724e+03   8.563e-01   2.754e-01   5.423e+01        1
+     700    1.539410e+03   4.816e-04   2.754e-01   6.059e-01        1
+     710    1.508862e+03   1.338e-01   2.754e-01   7.150e+01        1
+     720    1.471822e+03   8.007e-01   2.754e-01   5.859e+00        1
+     730    1.462652e+03   4.300e-03   2.754e-01   1.254e+01        1
+     740    1.435171e+03   1.797e+00   2.754e-01   1.414e+01        2
+     750    1.390164e+03   5.275e-01   2.754e-01   3.011e-05        0
+     760    1.378822e+03   2.656e-02   2.754e-01   3.156e+00        1
+     770    1.352374e+03   3.018e-01   2.754e-01   4.977e+01        1
+     780    1.314268e+03   1.669e+00   2.754e-01   9.095e+01        1
+     790    1.278593e+03   9.580e-01   2.754e-01   6.359e+01        1
+     800    1.237789e+03   9.686e-01   2.754e-01   5.365e+01        1
+     810    1.216585e+03   7.584e-01   2.754e-01   4.802e+00        1
+     820    1.207341e+03   7.502e-02   2.754e-01   9.329e+00        1
+     830    1.191134e+03   1.030e-01   2.754e-01   5.270e+00        1
+     840    1.162634e+03   1.906e-01   2.754e-01   5.599e+00        1
+     850    1.119089e+03   4.054e-01   2.754e-01   1.319e+00        1
+     860    1.107416e+03   1.744e-01   2.754e-01   5.989e-09        0
+     870    1.085254e+03   8.788e-01   2.754e-01   8.247e+01        2
+     880    1.048930e+03   1.233e+00   2.754e-01   6.799e+01        1
+     890    1.044937e+03   1.605e-01   2.754e-01   1.340e+01        1
+     900    1.040292e+03   2.529e-02   2.754e-01   7.049e-01        1
+     910    1.012240e+03   1.883e-01   2.754e-01   5.623e+01        1
+     920    9.898214e+02   3.215e-01   2.754e-01   1.730e+01        1
+     930    9.645263e+02   7.811e-01   2.754e-01   3.181e+00        1
+     940    9.408876e+02   1.031e+00   2.754e-01   7.048e+01        1
+     950    9.199329e+02   6.040e-01   2.754e-01   1.146e+00        1
+     960    9.204655e+02   3.156e-01   2.754e-01   2.091e-07        0
+     970    9.209880e+02   2.007e-01   2.754e-01   1.051e+00        1
+     980    9.212934e+02   1.423e-01   2.754e-01   5.339e-01        1
+     990    9.007169e+02   4.961e-01   2.754e-01   8.023e+01        1
+    1000    8.710973e+02   5.391e-01   2.754e-01   1.328e+01        1
+    1010    8.530088e+02   7.650e-01   2.754e-01   2.170e+01        1
+    1020    8.208210e+02   7.308e-01   2.754e-01   5.658e+01        1
+    1030    7.925801e+02   9.270e-01   2.754e-01   1.216e+00        1
+    1040    7.735603e+02   8.221e-01   2.754e-01   3.006e+01        1
+    1050    7.355951e+02   2.486e+00   2.754e-01   1.242e-04        0
+    1060    7.042732e+02   8.319e-01   2.754e-01   5.071e+01        1
+    1070    7.070832e+02   2.875e-01   2.754e-01   5.342e+01        1
+    1080    6.926068e+02   8.494e-01   2.754e-01   7.461e+01        1
+    1090    6.718373e+02   2.677e-01   2.754e-01   1.347e+01        1
+    1100    6.660322e+02   1.722e-01   2.754e-01   4.260e+00        1
+    1110    6.642055e+02   4.208e-02   2.754e-01   5.423e-01        1
+    1120    6.520222e+02   3.917e-02   2.754e-01   1.162e+01        1
+    1130    6.368844e+02   4.623e-02   2.754e-01   6.262e-01        0
+    1140    6.368843e+02   9.999e-11   2.754e-01   2.581e-10        0
+    1143    6.368843e+02   9.999e-11   2.754e-01   1.645e-13        0
+
+EXIT: Primal feasible solution; terminate because the relative change in
+      solution estimate < xtol for 3 consecutive iterations.
+
+HINT: For large problems, one of the parallel linear solvers available in 
+      Knitro (e.g., linsolver=6, 7, or 8) may improve performance.
+
+Final Statistics
+----------------
+Final objective value               =   6.36884277320909e+02
+Final feasibility error (abs / rel) =   1.00e-10 / 5.34e-13
+Final optimality error  (abs / rel) =   2.75e-01 / 2.75e-01
+# of iterations                     =       1143 
+# of CG iterations                  =       1297 
+# of function evaluations           =       1194
+# of gradient evaluations           =       1145
+# of Hessian evaluations            =       1144
+Total program time (secs)           =    1336.94519 (  1327.843 CPU time)
+Time spent in evaluations (secs)    =     100.19735
+
+===============================================================================
+
+
+=======================================
+           Academic License
+       (NOT FOR COMMERCIAL USE)
+         Artelys Knitro 14.2.0
+=======================================
+
+Knitro using up to 16 threads.
+Knitro presolve eliminated 0 variables and 0 constraints.
+
+concurrent_evals         0
+datacheck                0
+findiff_numthreads       1
+hessian_no_f             1
+hessopt                  1
+
+Problem Characteristics                                 (   Presolved)
+-----------------------
+Objective goal:  Minimize
+Objective type:  linear
+Number of variables:                              40251 (       40251)
+    bounded below only:                               0 (           0)
+    bounded above only:                               0 (           1)
+    bounded below and above:                      40251 (       40250)
+    fixed:                                            0 (           0)
+    free:                                             0 (           0)
+Number of constraints:                            82125 (       82125)
+    linear equalities:                                0 (           0)
+    quadratic equalities:                          7750 (        7750)
+    gen. nonlinear equalities:                      125 (         125)
+    linear one-sided inequalities:                10750 (       10750)
+    quadratic one-sided inequalities:             63500 (       63500)
+    gen. nonlinear one-sided inequalities:            0 (           0)
+    linear two-sided inequalities:                    0 (           0)
+    quadratic two-sided inequalities:                 0 (           0)
+    gen. nonlinear two-sided inequalities:            0 (           0)
+Number of nonzeros in Jacobian:                  489250 (      489250)
+Number of nonzeros in Hessian:                   219000 (      219000)
+
+Knitro using the Interior-Point/Barrier Direct algorithm.
+
+  Iter      Objective      FeasError   OptError    ||Step||    CGits 
+--------  --------------  ----------  ----------  ----------  -------
+       0    1.797334e+00   1.783e+02
+      10    2.477701e+01   5.588e+01   1.633e+02   1.121e+02        1
+      20    1.745077e+02   3.061e+01   4.108e-01   1.968e+02        1
+      30    5.110502e+02   2.623e+01   4.448e+08   1.306e+02        0
+      40    6.898148e+02   3.574e+01   8.104e+00   2.232e+02        9
+      50    1.021768e+03   5.328e+01   9.882e-01   7.911e+02        2
+      60    1.357588e+03   1.060e+02   3.574e+05   5.974e+02        0
+      70    1.526511e+03   7.929e+01   9.013e+06   1.959e+01        0
+      80    2.452365e+03   2.073e+02   9.984e-01   2.993e+02        4
+      90    3.143785e+03   1.623e+02   9.992e-01   3.830e+02        3
+     100    3.361378e+03   7.304e+02   9.993e-01   2.127e+02        6
+     110    3.391109e+03   1.742e+02   8.753e-01   3.102e+02        0
+     120    3.392823e+03   1.742e+02   9.482e-01   3.124e+02        1
+     130    3.395019e+03   1.743e+02   9.930e-01   8.875e+01        1
+     140    3.398205e+03   1.745e+02   9.927e-01   3.776e+02        1
+     150    3.404285e+03   1.748e+02   8.739e-01   9.425e+02        0
+     160    3.443051e+03   8.337e+00   9.997e-01   4.987e+01        4
+     170    3.536608e+03   3.239e+01   9.997e-01   3.652e+00        0
+     180    3.536608e+03   1.949e-01   4.419e+02   8.649e-01        0
+     190    3.537514e+03   1.593e-01   9.997e-01   3.502e+00        3
+     200    1.403270e+03   7.524e-07   9.997e-01   1.342e+03        0
+     210    1.372241e+03   2.492e-05   9.973e-01   1.302e-01        1
+     220    1.371922e+03   6.706e-01   7.626e-02   4.349e+00        2
+     230    1.371829e+03   3.590e-06   7.626e-02   2.328e-02        0
+     240    1.371217e+03   7.915e-04   7.626e-02   1.102e+00        0
+     250    1.370068e+03   4.508e-01   7.626e-02   3.639e-02        0
+     260    1.370900e+03   4.543e-05   7.626e-02   4.590e-01        0
+     270    1.367593e+03   1.279e-02   1.470e-02   1.225e+01        0
+     280    1.367140e+03   1.919e-14   1.475e-02   5.223e-07        0
+     290    1.365978e+03   2.841e-03   1.472e-02   1.830e-01        0
+     300    1.365167e+03   3.859e-04   1.659e-02   1.205e+00        0
+     310    1.363232e+03   1.222e-02   1.723e-02   1.630e+00        0
+     320    1.358934e+03   2.010e-03   1.723e-02   2.035e+00        0
+     330    1.357510e+03   1.075e-03   1.722e-02   1.297e+00        0
+     340    1.347101e+03   1.635e-01   1.720e-02   3.522e+00        0
+     350    1.339066e+03   3.226e-02   1.720e-02   6.375e+00        0
+     360    1.336888e+03   2.421e-02   1.722e-02   2.055e+00        0
+     370    1.324919e+03   3.662e-02   1.716e-02   1.213e+00        0
+     380    1.319368e+03   6.319e-02   1.722e-02   5.593e-01        0
+     390    1.315382e+03   3.283e-02   1.720e-02   6.998e+00        0
+     400    1.305230e+03   9.325e-04   1.714e-02   8.191e+00        0
+     410    1.297621e+03   1.457e-02   1.717e-02   6.214e+00        0
+     420    1.293028e+03   7.874e-02   1.719e-02   3.252e+00        0
+     430    1.290628e+03   4.222e-04   1.721e-02   5.124e+00        0
+     440    1.272258e+03   1.250e-01   1.706e-02   2.434e+00        0
+     450    1.267620e+03   8.080e-03   1.722e-02   8.772e-01        0
+     460    1.263624e+03   6.143e-03   1.720e-02   7.118e+00        0
+     470    1.261552e+03   2.347e-14   1.714e-02   1.092e-06        0
+     480    1.261540e+03   8.300e-08   1.717e-02   1.586e-02        0
+     490    1.260073e+03   2.708e-03   1.724e-02   1.370e+00        0
+     500    1.260018e+03   3.099e-14   1.723e-02   9.997e-11        0
+     510    1.259888e+03   1.057e-09   1.723e-02   1.077e-04        0
+     520    1.259941e+03   2.461e-06   1.715e-02   3.198e-02        0
+     530    1.259192e+03   3.195e-07   1.665e-02   4.854e-03        0
+     539    1.259192e+03   1.464e-14   1.665e-02   3.783e-13        1
+
+EXIT: Primal feasible solution; terminate because the relative change in
+      solution estimate < xtol for 3 consecutive iterations.
+
+HINT: For large problems, one of the parallel linear solvers available in 
+      Knitro (e.g., linsolver=6, 7, or 8) may improve performance.
+
+Final Statistics
+----------------
+Final objective value               =   1.25919216911156e+03
+Final feasibility error (abs / rel) =   1.46e-14 / 8.21e-17
+Final optimality error  (abs / rel) =   1.67e-02 / 1.67e-02
+# of iterations                     =        539 
+# of CG iterations                  =        375 
+# of function evaluations           =        629
+# of gradient evaluations           =        541
+# of Hessian evaluations            =        539
+Total program time (secs)           =     526.64404 (   522.733 CPU time)
+Time spent in evaluations (secs)    =      46.84914
+
+===============================================================================
+
+
+=======================================
+           Academic License
+       (NOT FOR COMMERCIAL USE)
+         Artelys Knitro 14.2.0
+=======================================
+
+Knitro using up to 16 threads.
+Knitro presolve eliminated 0 variables and 0 constraints.
+
+concurrent_evals         0
+datacheck                0
+findiff_numthreads       1
+hessian_no_f             1
+hessopt                  1
+
+Problem Characteristics                                 (   Presolved)
+-----------------------
+Objective goal:  Minimize
+Objective type:  linear
+Number of variables:                              40251 (       40251)
+    bounded below only:                               0 (           0)
+    bounded above only:                               0 (           1)
+    bounded below and above:                      40251 (       40250)
+    fixed:                                            0 (           0)
+    free:                                             0 (           0)
+Number of constraints:                            82125 (       82125)
+    linear equalities:                                0 (           0)
+    quadratic equalities:                          7750 (        7750)
+    gen. nonlinear equalities:                      125 (         125)
+    linear one-sided inequalities:                10750 (       10750)
+    quadratic one-sided inequalities:             63500 (       63500)
+    gen. nonlinear one-sided inequalities:            0 (           0)
+    linear two-sided inequalities:                    0 (           0)
+    quadratic two-sided inequalities:                 0 (           0)
+    gen. nonlinear two-sided inequalities:            0 (           0)
+Number of nonzeros in Jacobian:                  489250 (      489250)
+Number of nonzeros in Hessian:                   219000 (      219000)
+
+Knitro using the Interior-Point/Barrier Direct algorithm.
+
+  Iter      Objective      FeasError   OptError    ||Step||    CGits 
+--------  --------------  ----------  ----------  ----------  -------
+       0    0.000000e+00   1.000e+00
+      10    2.406634e+00   1.149e+01   1.453e+03   1.996e+01        1
+      20    8.178702e+01   2.941e+01   8.758e+02   3.766e+01        0
+      30    1.730670e+02   1.636e+01   4.104e+02   8.330e+01        0
+      40    1.971223e+02   1.718e+01   4.315e-01   6.756e+01        0
+      50    1.988222e+02   1.723e+01   4.651e-01   2.208e+01        0
+      60    2.018025e+02   1.732e+01   2.867e-01   5.100e+01        0
+      70    2.097031e+02   1.139e+01   2.993e-01   1.182e+02        0
+      80    2.328966e+02   1.393e+00   3.694e-01   2.975e+01        0
+      90    2.779056e+02   8.436e-01   4.603e-01   1.227e+01        0
+     100    3.107770e+02   5.679e-01   5.171e-01   3.228e+00        0
+     110    3.258215e+02   2.624e-01   9.078e-01   2.156e-01        0
+     120    3.594432e+02   1.126e-01   9.164e-01   4.121e-01        0
+     130    4.620349e+02   6.525e+00   9.744e-01   3.353e+00        0
+     140    1.721051e+02   2.557e-03   9.744e-01   4.180e+00        1
+     150    1.701260e+02   5.888e-08   9.744e-01   3.203e-03        0
+     160    1.700753e+02   5.512e-07   9.744e-01   8.625e-03        0
+     170    1.699673e+02   3.052e-05   9.744e-01   6.368e-02        0
+     180    1.699289e+02   1.187e-07   9.744e-01   4.346e-03        0
+     190    1.698258e+02   2.449e-08   9.744e-01   2.111e-03        0
+     200    1.697733e+02   2.563e-06   9.744e-01   4.594e-04        0
+     210    1.697253e+02   4.158e-07   9.744e-01   7.545e-03        0
+     220    1.696544e+02   4.025e-06   9.744e-01   2.294e-02        0
+     230    1.695890e+02   1.296e-07   9.744e-01   4.154e-03        0
+     240    1.695409e+02   1.070e-09   9.744e-01   8.320e-05        0
+     250    1.657293e+02   1.662e-11   9.744e-01   4.601e-06        0
+     254    1.657293e+02   2.082e-15   9.744e-01   1.015e-11        0
+
+EXIT: Primal feasible solution; terminate because the relative change in
+      solution estimate < xtol for 3 consecutive iterations.
+
+HINT: For large problems, one of the parallel linear solvers available in 
+      Knitro (e.g., linsolver=6, 7, or 8) may improve performance.
+
+Final Statistics
+----------------
+Final objective value               =   1.65729322780696e+02
+Final feasibility error (abs / rel) =   2.08e-15 / 2.08e-15
+Final optimality error  (abs / rel) =   9.74e-01 / 9.74e-01
+# of iterations                     =        254 
+# of CG iterations                  =         86 
+# of function evaluations           =        259
+# of gradient evaluations           =        256
+# of Hessian evaluations            =        255
+Total program time (secs)           =     193.06210 (   191.357 CPU time)
+Time spent in evaluations (secs)    =      20.69417
+
+===============================================================================
+
+
+=======================================
+           Academic License
+       (NOT FOR COMMERCIAL USE)
+         Artelys Knitro 14.2.0
+=======================================
+
+Knitro using up to 16 threads.
+Knitro presolve eliminated 0 variables and 0 constraints.
+
+concurrent_evals         0
+datacheck                0
+findiff_numthreads       1
+hessian_no_f             1
+hessopt                  1
+
+Problem Characteristics                                 (   Presolved)
+-----------------------
+Objective goal:  Minimize
+Objective type:  linear
+Number of variables:                              40251 (       40251)
+    bounded below only:                               0 (           0)
+    bounded above only:                               0 (           1)
+    bounded below and above:                      40251 (       40250)
+    fixed:                                            0 (           0)
+    free:                                             0 (           0)
+Number of constraints:                            82125 (       82125)
+    linear equalities:                                0 (           0)
+    quadratic equalities:                          7750 (        7750)
+    gen. nonlinear equalities:                      125 (         125)
+    linear one-sided inequalities:                10750 (       10750)
+    quadratic one-sided inequalities:             63500 (       63500)
+    gen. nonlinear one-sided inequalities:            0 (           0)
+    linear two-sided inequalities:                    0 (           0)
+    quadratic two-sided inequalities:                 0 (           0)
+    gen. nonlinear two-sided inequalities:            0 (           0)
+Number of nonzeros in Jacobian:                  489250 (      489250)
+Number of nonzeros in Hessian:                   219000 (      219000)
+
+Knitro using the Interior-Point/Barrier Direct algorithm.
+
+  Iter      Objective      FeasError   OptError    ||Step||    CGits 
+--------  --------------  ----------  ----------  ----------  -------
+       0    3.967247e+00   1.577e+02
+      10    2.356723e+01   5.580e+01   8.575e+01   7.794e+01        1
+      20    1.804778e+02   2.626e+01   3.887e-01   2.151e+02        1
+      30    4.962873e+02   2.502e+01   3.667e+00   1.563e+02        2
+      40    6.947729e+02   3.426e+01   4.063e+08   2.600e+02        0
+      50    8.909238e+02   4.428e+01   9.803e-01   2.418e+02        1
+      60    1.088622e+03   5.438e+01   1.900e+00   2.479e+02        1
+      70    1.261598e+03   6.321e+01   5.861e+05   2.178e+02        0
+      80    1.852476e+03   1.364e+02   9.498e+06   1.513e+02        0
+      90    2.385887e+03   1.947e+02   9.985e-01   1.780e+02        2
+     100    2.852528e+03   1.482e+02   9.990e-01   5.033e+02        3
+     110    5.115851e+03   4.388e+02   1.476e+01   7.186e+01       15
+     120    5.125089e+03   1.908e+02   9.874e-01   2.769e+01        1
+     130    5.126404e+03   1.103e+01   9.381e-01   6.136e+01        0
+     140    5.141134e+03   1.020e-03   9.942e-01   1.863e+00        0
+     150    2.018830e+03   1.307e-02   9.942e-01   6.971e+00        1
+     160    2.005935e+03   6.867e-08   9.925e-01   4.888e-04        0
+     170    2.005935e+03   2.258e-14   8.928e-01   1.426e-09        0
+     180    2.005935e+03   1.806e-14   6.260e-01   3.675e-09        0
+     190    2.005936e+03   3.902e-13   6.260e-01   2.215e-05        0
+     200    2.005704e+03   4.942e-03   4.469e-01   3.788e-02        0
+     210    2.005028e+03   1.615e-02   4.469e-01   4.274e-01        0
+     220    2.004742e+03   1.808e-14   4.469e-01   6.517e-10        0
+     230    2.004541e+03   3.065e-05   4.469e-01   6.516e-03        0
+     240    2.004539e+03   1.669e-14   4.469e-01   9.829e-10        0
+     250    2.003896e+03   4.988e-01   9.818e-02   4.255e-02        0
+     260    2.014764e+03   9.101e-04   9.563e-01   2.554e+00        0
+     270    2.460763e+03   3.615e-03   9.957e-01   1.102e+02        0
+     280    3.804177e+03   4.662e+01   9.824e-01   6.873e+01        0
+     290    2.347864e+03   2.208e-01   6.850e-01   3.003e+00        0
+     300    2.346860e+03   1.827e-04   2.962e-01   6.764e-02        0
+     310    2.346594e+03   9.192e-05   2.962e-01   1.827e-01        0
+     320    2.345804e+03   1.940e-02   2.962e-01   4.460e-01        0
+     330    2.344625e+03   1.171e-03   2.962e-01   7.022e-01        0
+     340    2.343187e+03   3.680e-03   2.962e-01   1.172e+00        0
+     350    2.343086e+03   6.639e-07   2.962e-01   3.187e-02        1
+     360    2.343046e+03   2.257e-11   2.962e-01   3.278e-05        1
+     370    2.341946e+03   8.871e-09   2.412e-01   1.653e-03        1
+     380    2.341831e+03   6.943e-01   2.412e-01   1.997e+00        7
+     390    2.338830e+03   7.773e-06   2.412e-01   1.573e-02        0
+     400    2.337953e+03   4.202e-03   5.596e-02   5.208e-03        1
+     410    2.337952e+03   5.647e-04   5.596e-02   1.826e-01        2
+     420    2.337948e+03   1.602e-04   4.660e-02   8.616e-03        0
+     430    2.327109e+03   2.882e+00   4.660e-02   1.174e-02        1
+     440    2.327108e+03   8.169e-02   4.660e-02   2.512e-01        1
+     450    2.323596e+03   2.131e-03   4.660e-02   1.506e+01        1
+     460    2.323591e+03   1.751e-07   4.660e-02   3.250e-03        0
+     470    2.323345e+03   1.291e-03   4.660e-02   3.884e-01        0
+     480    2.321129e+03   4.742e-04   4.660e-02   2.849e+00        0
+     490    2.317034e+03   9.709e-03   4.660e-02   4.285e+00        0
+     500    2.313999e+03   1.679e-03   1.270e+02   6.427e-01        1
+     510    2.313973e+03   3.804e-05   1.000e+00   1.714e-01        0
+     520    2.313878e+03   5.020e-14   7.826e-01   3.738e-06        0
+     530    2.313879e+03   2.798e-10   7.826e-01   0.000e+00        0
+     540    2.313881e+03   5.009e-10   7.826e-01   7.240e-07        1
+     550    2.313870e+03   4.216e-08   4.128e-01   2.099e-03        0
+     560    2.313877e+03   2.433e-06   4.128e-01   6.824e-02        0
+     570    2.313877e+03   5.079e-14   4.128e-01   8.243e-06        1
+     580    2.313877e+03   3.812e-14   4.128e-01   8.256e-06        1
+     590    2.313877e+03   4.502e-14   4.128e-01   8.247e-06        1
+     600    2.313877e+03   5.403e-14   4.128e-01   8.266e-06        1
+     610    2.313877e+03   1.211e-09   4.128e-01   5.023e-06        0
+     620    2.298865e+03   3.698e-03   2.059e-01   2.192e+01        1
+     630    2.287178e+03   2.833e-03   2.056e-01   3.140e+01        1
+     640    2.275283e+03   4.111e-14   2.052e-01   1.910e-06        1
+     650    2.275283e+03   5.017e-14   2.052e-01   1.909e-06        1
+     660    2.275283e+03   3.282e-14   2.052e-01   1.907e-06        1
+     670    2.275283e+03   4.884e-14   2.052e-01   1.904e-06        1
+     680    2.275283e+03   4.823e-14   2.052e-01   1.901e-06        1
+     690    2.275283e+03   5.555e-14   2.052e-01   1.899e-06        1
+     700    2.275283e+03   3.142e-14   2.052e-01   1.896e-06        1
+     710    2.275283e+03   4.781e-14   2.052e-01   1.894e-06        1
+     720    2.275283e+03   4.609e-14   2.052e-01   1.891e-06        1
+     730    2.275283e+03   3.296e-14   2.052e-01   1.889e-06        1
+     740    2.275283e+03   4.625e-14   2.052e-01   1.886e-06        1
+     750    2.275283e+03   5.049e-14   2.052e-01   1.884e-06        1
+     760    2.275283e+03   4.385e-14   2.052e-01   1.881e-06        1
+     770    2.275283e+03   4.963e-14   2.052e-01   1.878e-06        1
+     780    2.275283e+03   5.360e-14   2.052e-01   1.876e-06        1
+     790    2.275283e+03   4.992e-14   2.052e-01   1.873e-06        1
+     800    2.275283e+03   5.076e-14   2.052e-01   1.871e-06        1
+     810    2.275283e+03   4.957e-14   2.052e-01   1.868e-06        1
+     820    2.275283e+03   4.820e-14   2.052e-01   1.866e-06        1
+     830    2.275283e+03   4.582e-14   2.052e-01   1.863e-06        1
+     840    2.275283e+03   4.931e-14   2.052e-01   1.861e-06        1
+     850    2.275283e+03   5.242e-14   2.052e-01   1.858e-06        1
+     860    2.275283e+03   5.675e-14   2.052e-01   1.856e-06        1
+     870    2.275283e+03   4.304e-14   2.052e-01   1.853e-06        1
+     880    2.275283e+03   4.449e-14   2.052e-01   1.851e-06        1
+     890    2.275283e+03   4.145e-14   2.052e-01   1.848e-06        1
+     900    2.275283e+03   4.645e-14   2.052e-01   1.846e-06        1
+     910    2.275283e+03   4.091e-14   2.052e-01   1.844e-06        1
+     920    2.275283e+03   5.183e-14   2.052e-01   1.841e-06        1
+     930    2.275283e+03   3.736e-14   2.052e-01   1.839e-06        1
+     940    2.275283e+03   5.355e-14   2.052e-01   1.836e-06        1
+     950    2.275283e+03   4.319e-14   2.052e-01   1.834e-06        1
+     960    2.275283e+03   3.347e-14   2.052e-01   1.831e-06        1
+     970    2.275283e+03   4.188e-14   2.052e-01   1.829e-06        1
+     980    2.275283e+03   4.770e-14   2.052e-01   1.826e-06        1
+     990    2.275283e+03   3.836e-14   2.052e-01   1.824e-06        1
+    1000    2.275283e+03   5.675e-14   2.052e-01   1.822e-06        1
+    1010    2.275283e+03   5.398e-14   2.052e-01   1.819e-06        1
+    1020    2.275283e+03   3.382e-14   2.052e-01   1.817e-06        1
+    1030    2.275283e+03   4.079e-14   2.052e-01   1.814e-06        1
+    1040    2.275283e+03   4.538e-14   2.052e-01   1.812e-06        1
+    1050    2.275283e+03   3.694e-14   2.052e-01   1.810e-06        1
+    1060    2.275283e+03   5.181e-14   2.052e-01   1.807e-06        1
+    1070    2.275283e+03   4.674e-14   2.052e-01   1.805e-06        1
+    1080    2.275283e+03   5.251e-14   2.052e-01   1.803e-06        1
+    1090    2.275283e+03   3.829e-14   2.052e-01   1.800e-06        1
+    1100    2.275283e+03   4.367e-14   2.052e-01   1.798e-06        1
+    1110    2.275283e+03   3.789e-14   2.052e-01   1.795e-06        1
+    1120    2.275283e+03   4.786e-14   2.052e-01   1.793e-06        1
+    1130    2.275283e+03   3.451e-14   2.052e-01   1.791e-06        1
+    1140    2.275283e+03   4.281e-14   2.052e-01   1.788e-06        1
+    1150    2.275283e+03   3.703e-14   2.052e-01   1.786e-06        1
+    1160    2.275283e+03   4.707e-14   2.052e-01   1.784e-06        1
+    1170    2.275283e+03   3.696e-14   2.052e-01   1.781e-06        1
+    1180    2.275283e+03   4.925e-14   2.052e-01   1.779e-06        1
+    1190    2.275283e+03   4.446e-14   2.052e-01   1.777e-06        1
+    1200    2.275283e+03   4.496e-14   2.052e-01   1.775e-06        1
+    1210    2.275283e+03   4.798e-14   2.052e-01   1.772e-06        1
+    1220    2.275283e+03   3.665e-14   2.052e-01   1.770e-06        1
+    1230    2.275283e+03   3.719e-14   2.052e-01   1.768e-06        1
+    1240    2.275283e+03   4.803e-14   2.052e-01   1.765e-06        1
+    1250    2.275283e+03   4.345e-14   2.052e-01   1.763e-06        1
+    1260    2.275283e+03   4.824e-14   2.052e-01   1.761e-06        1
+    1270    2.275283e+03   4.703e-14   2.052e-01   1.759e-06        1
+    1280    2.275283e+03   5.142e-14   2.052e-01   1.756e-06        1
+    1290    2.275283e+03   3.832e-14   2.052e-01   1.754e-06        1
+    1300    2.275283e+03   3.901e-14   2.052e-01   1.752e-06        1
+    1310    2.275283e+03   5.822e-14   2.052e-01   1.749e-06        1
+    1320    2.275283e+03   5.280e-14   2.052e-01   1.747e-06        1
+    1330    2.275283e+03   5.029e-14   2.052e-01   1.745e-06        1
+    1340    2.275283e+03   4.796e-14   2.052e-01   1.743e-06        1
+    1350    2.275283e+03   4.031e-14   2.052e-01   1.741e-06        1
+    1360    2.275283e+03   4.031e-14   2.052e-01   1.738e-06        1
+    1370    2.275283e+03   4.409e-14   2.052e-01   1.736e-06        1
+    1380    2.275283e+03   3.515e-14   2.052e-01   1.734e-06        1
+    1390    2.275283e+03   5.096e-14   2.052e-01   1.732e-06        1
+    1400    2.275283e+03   5.919e-14   2.052e-01   1.729e-06        1
+    1410    2.275283e+03   4.548e-14   2.052e-01   1.727e-06        1
+    1420    2.275283e+03   4.984e-14   2.052e-01   1.725e-06        1
+    1430    2.275283e+03   5.151e-14   2.052e-01   1.723e-06        1
+    1440    2.275283e+03   4.537e-14   2.052e-01   1.721e-06        1
+    1450    2.275283e+03   4.040e-14   2.052e-01   1.718e-06        1
+    1460    2.275283e+03   4.771e-14   2.052e-01   1.716e-06        1
+    1470    2.275283e+03   4.352e-14   2.052e-01   1.714e-06        1
+    1480    2.275283e+03   4.811e-14   2.052e-01   1.712e-06        1
+    1490    2.275283e+03   4.184e-14   2.052e-01   1.710e-06        1
+    1500    2.275283e+03   5.290e-14   2.052e-01   1.708e-06        1
+    1510    2.275283e+03   4.165e-14   2.052e-01   1.705e-06        1
+    1520    2.275283e+03   5.752e-14   2.052e-01   1.703e-06        1
+    1530    2.275283e+03   4.553e-14   2.052e-01   1.701e-06        1
+    1540    2.275283e+03   4.617e-14   2.052e-01   1.699e-06        1
+    1550    2.275283e+03   3.636e-14   2.052e-01   1.697e-06        1
+    1560    2.275283e+03   5.160e-14   2.052e-01   1.695e-06        1
+    1570    2.275283e+03   5.161e-14   2.052e-01   1.693e-06        1
+    1580    2.275283e+03   5.135e-14   2.052e-01   1.690e-06        1
+    1590    2.275283e+03   3.716e-14   2.052e-01   1.688e-06        1
+    1600    2.275283e+03   3.944e-14   2.052e-01   1.686e-06        1
+    1610    2.275283e+03   3.617e-14   2.052e-01   1.684e-06        1
+    1620    2.275283e+03   5.201e-14   2.052e-01   1.682e-06        1
+    1630    2.275283e+03   4.526e-14   2.052e-01   1.680e-06        1
+    1640    2.275283e+03   4.449e-14   2.052e-01   1.678e-06        1
+    1650    2.275283e+03   3.954e-14   2.052e-01   1.676e-06        1
+    1660    2.275283e+03   4.512e-14   2.052e-01   1.674e-06        1
+    1670    2.275283e+03   3.759e-14   2.052e-01   1.672e-06        1
+    1680    2.275283e+03   3.414e-14   2.052e-01   1.669e-06        1
+    1690    2.275283e+03   5.078e-14   2.052e-01   1.667e-06        1
+    1700    2.275283e+03   3.747e-14   2.052e-01   1.665e-06        1
+    1710    2.275283e+03   5.904e-14   2.052e-01   1.663e-06        1
+    1720    2.275283e+03   4.811e-14   2.052e-01   1.661e-06        1
+    1730    2.275283e+03   4.038e-14   2.052e-01   1.659e-06        1
+    1740    2.275283e+03   5.360e-14   2.052e-01   1.657e-06        1
+    1750    2.275283e+03   4.158e-14   2.052e-01   1.655e-06        1
+    1760    2.275283e+03   4.623e-14   2.052e-01   1.653e-06        1
+    1770    2.275283e+03   5.682e-14   2.052e-01   1.651e-06        1
+    1780    2.275283e+03   3.578e-14   2.052e-01   1.649e-06        1
+    1790    2.275283e+03   3.873e-14   2.052e-01   1.647e-06        1
+    1800    2.275283e+03   4.213e-14   2.052e-01   1.645e-06        1
+    1810    2.275283e+03   3.346e-14   2.052e-01   1.643e-06        1
+    1820    2.275283e+03   4.495e-14   2.052e-01   1.641e-06        1
+    1830    2.275283e+03   3.951e-14   2.052e-01   1.639e-06        1
+    1840    2.275283e+03   3.876e-14   2.052e-01   1.637e-06        1
+    1850    2.275283e+03   3.718e-14   2.052e-01   1.635e-06        1
+    1860    2.275283e+03   4.366e-14   2.052e-01   1.633e-06        1
+    1870    2.275283e+03   5.609e-14   2.052e-01   1.631e-06        1
+    1880    2.275283e+03   4.562e-14   2.052e-01   1.629e-06        1
+    1890    2.275283e+03   3.364e-14   2.052e-01   1.627e-06        1
+    1900    2.275283e+03   3.764e-14   2.052e-01   1.625e-06        1
+    1910    2.275283e+03   3.840e-14   2.052e-01   1.623e-06        1
+    1920    2.275283e+03   5.249e-14   2.052e-01   1.621e-06        1
+    1930    2.275283e+03   4.410e-14   2.052e-01   1.619e-06        1
+    1940    2.275283e+03   3.668e-14   2.052e-01   1.617e-06        1
+    1950    2.275283e+03   3.766e-14   2.052e-01   1.615e-06        1
+    1960    2.275283e+03   5.243e-14   2.052e-01   1.613e-06        1
+    1970    2.275283e+03   3.776e-14   2.052e-01   1.611e-06        1
+    1980    2.275283e+03   4.706e-14   2.052e-01   1.609e-06        1
+    1990    2.275283e+03   4.691e-14   2.052e-01   1.607e-06        1
+    2000    2.275283e+03   5.017e-14   2.052e-01   1.605e-06        1
+    2010    2.275283e+03   3.098e-14   2.052e-01   1.603e-06        1
+    2020    2.275283e+03   4.090e-14   2.052e-01   1.601e-06        1
+    2030    2.275283e+03   4.678e-14   2.052e-01   1.599e-06        1
+    2040    2.275283e+03   4.985e-14   2.052e-01   1.597e-06        1
+    2050    2.275283e+03   5.694e-14   2.052e-01   1.595e-06        1
+    2060    2.275283e+03   3.990e-14   2.052e-01   1.593e-06        1
+    2070    2.275283e+03   4.949e-14   2.052e-01   1.591e-06        1
+    2080    2.275283e+03   4.939e-14   2.052e-01   1.589e-06        1
+    2090    2.275283e+03   5.357e-14   2.052e-01   1.588e-06        1
+    2100    2.275283e+03   5.451e-14   2.052e-01   1.586e-06        1
+    2110    2.275283e+03   2.695e-14   2.052e-01   1.584e-06        1
+    2120    2.275283e+03   4.967e-14   2.052e-01   1.582e-06        1
+    2130    2.275283e+03   3.704e-14   2.052e-01   1.580e-06        1
+    2140    2.275283e+03   4.827e-14   2.052e-01   1.578e-06        1
+    2150    2.275283e+03   4.620e-14   2.052e-01   1.576e-06        1
+    2160    2.275283e+03   3.587e-14   2.052e-01   1.574e-06        1
+    2170    2.275283e+03   5.539e-14   2.052e-01   1.572e-06        1
+    2180    2.275283e+03   3.782e-14   2.052e-01   1.571e-06        1
+    2190    2.275283e+03   4.448e-14   2.052e-01   1.569e-06        1
+    2200    2.275283e+03   5.342e-14   2.052e-01   1.567e-06        1
+    2210    2.275283e+03   3.904e-14   2.052e-01   1.565e-06        1
+    2220    2.275283e+03   4.924e-14   2.052e-01   1.563e-06        1
+    2230    2.275283e+03   4.077e-14   2.052e-01   1.561e-06        1
+    2240    2.275283e+03   4.777e-14   2.052e-01   1.559e-06        1
+    2250    2.275283e+03   4.077e-14   2.052e-01   1.557e-06        1
+    2260    2.275283e+03   4.467e-14   2.052e-01   1.556e-06        1
+    2270    2.275283e+03   3.562e-14   2.052e-01   1.554e-06        1
+    2280    2.275283e+03   4.666e-14   2.052e-01   1.552e-06        1
+    2290    2.275283e+03   4.544e-14   2.052e-01   1.550e-06        1
+    2300    2.275283e+03   4.786e-14   2.052e-01   1.548e-06        1
+    2310    2.275283e+03   3.882e-14   2.052e-01   1.546e-06        1
+    2320    2.275283e+03   4.090e-14   2.052e-01   1.545e-06        1
+    2330    2.275283e+03   4.739e-14   2.052e-01   1.543e-06        1
+    2340    2.275283e+03   4.753e-14   2.052e-01   1.541e-06        1
+    2350    2.275283e+03   4.631e-14   2.052e-01   1.539e-06        1
+    2360    2.275283e+03   3.220e-14   2.052e-01   1.537e-06        1
+    2370    2.275283e+03   5.607e-14   2.052e-01   1.535e-06        1
+    2380    2.275283e+03   4.430e-14   2.052e-01   1.534e-06        1
+    2390    2.275283e+03   5.311e-14   2.052e-01   1.532e-06        1
+    2400    2.275283e+03   4.910e-14   2.052e-01   1.530e-06        1
+    2410    2.275283e+03   5.095e-14   2.052e-01   1.528e-06        1
+    2420    2.275283e+03   4.961e-14   2.052e-01   1.526e-06        1
+    2430    2.275283e+03   4.031e-14   2.052e-01   1.525e-06        1
+    2440    2.275283e+03   4.430e-14   2.052e-01   1.523e-06        1
+    2450    2.275283e+03   4.177e-14   2.052e-01   1.521e-06        1
+    2460    2.275283e+03   4.073e-14   2.052e-01   1.519e-06        1
+    2470    2.275283e+03   4.897e-14   2.052e-01   1.518e-06        1
+    2480    2.275283e+03   4.811e-14   2.052e-01   1.516e-06        1
+    2490    2.275283e+03   3.582e-14   2.052e-01   1.514e-06        1
+    2500    2.275283e+03   5.297e-14   2.052e-01   1.512e-06        1
+    2510    2.275283e+03   4.431e-14   2.052e-01   1.510e-06        1
+    2520    2.275283e+03   4.166e-14   2.052e-01   1.509e-06        1
+    2530    2.275283e+03   4.140e-14   2.052e-01   1.507e-06        1
+    2540    2.275283e+03   5.938e-14   2.052e-01   1.505e-06        1
+    2550    2.275283e+03   4.081e-14   2.052e-01   1.503e-06        1
+    2560    2.275283e+03   3.651e-14   2.052e-01   1.502e-06        1
+    2570    2.275283e+03   4.685e-14   2.052e-01   1.500e-06        1
+    2580    2.275283e+03   4.967e-14   2.052e-01   1.498e-06        1
+    2590    2.275283e+03   4.879e-14   2.052e-01   1.496e-06        1
+    2600    2.275283e+03   5.054e-14   2.052e-01   1.495e-06        1
+    2610    2.275283e+03   4.424e-14   2.052e-01   1.493e-06        1
+    2620    2.275283e+03   3.433e-14   2.052e-01   1.491e-06        1
+    2630    2.275283e+03   5.584e-14   2.052e-01   1.490e-06        1
+    2640    2.275283e+03   3.757e-14   2.052e-01   1.488e-06        1
+    2650    2.275283e+03   5.627e-14   2.052e-01   1.486e-06        1
+    2660    2.275283e+03   4.538e-14   2.052e-01   1.484e-06        1
+    2670    2.275283e+03   5.521e-14   2.052e-01   1.483e-06        1
+    2680    2.275283e+03   3.812e-14   2.052e-01   1.481e-06        1
+    2690    2.275283e+03   4.567e-14   2.052e-01   1.479e-06        1
+    2700    2.275283e+03   4.316e-14   2.052e-01   1.478e-06        1
+    2710    2.275283e+03   4.394e-14   2.052e-01   1.476e-06        1
+    2720    2.275283e+03   4.810e-14   2.052e-01   1.474e-06        1
+    2730    2.275283e+03   4.979e-14   2.052e-01   1.473e-06        1
+    2740    2.275283e+03   4.838e-14   2.052e-01   1.471e-06        1
+    2750    2.275283e+03   5.515e-14   2.052e-01   1.469e-06        1
+    2760    2.275283e+03   5.558e-14   2.052e-01   1.467e-06        1
+    2770    2.275283e+03   5.122e-14   2.052e-01   1.466e-06        1
+    2780    2.275283e+03   4.893e-14   2.052e-01   1.464e-06        1
+    2790    2.275283e+03   4.030e-14   2.052e-01   1.462e-06        1
+    2800    2.275283e+03   4.000e-14   2.052e-01   1.461e-06        1
+    2810    2.275283e+03   4.587e-14   2.052e-01   1.459e-06        1
+    2820    2.275283e+03   4.084e-14   2.052e-01   1.457e-06        1
+    2830    2.275283e+03   4.240e-14   2.052e-01   1.456e-06        1
+    2840    2.275283e+03   4.723e-14   2.052e-01   1.454e-06        1
+    2850    2.275283e+03   4.947e-14   2.052e-01   1.452e-06        1
+    2860    2.275282e+03   4.369e-14   2.052e-01   1.451e-06        1
+    2870    2.275282e+03   4.270e-14   2.052e-01   1.449e-06        1
+    2880    2.275282e+03   4.302e-14   2.052e-01   1.448e-06        1
+    2890    2.275282e+03   3.263e-14   2.052e-01   1.446e-06        1
+    2900    2.275282e+03   4.731e-14   2.052e-01   1.444e-06        1
+    2910    2.275282e+03   4.195e-14   2.052e-01   1.443e-06        1
+    2920    2.275282e+03   4.277e-14   2.052e-01   1.441e-06        1
+    2930    2.275282e+03   4.562e-14   2.052e-01   1.439e-06        1
+    2940    2.275282e+03   4.738e-14   2.052e-01   1.438e-06        1
+    2950    2.275282e+03   4.097e-14   2.052e-01   1.436e-06        1
+    2960    2.275282e+03   3.851e-14   2.052e-01   1.435e-06        1
+    2970    2.275282e+03   5.089e-14   2.052e-01   1.433e-06        1
+    2980    2.275282e+03   5.199e-14   2.052e-01   1.431e-06        1
+    2990    2.275282e+03   5.194e-14   2.052e-01   1.430e-06        1
+    3000    2.275282e+03   4.391e-14   2.052e-01   1.428e-06        1
+    3010    2.275282e+03   3.834e-14   2.052e-01   1.426e-06        1
+    3020    2.275282e+03   5.661e-14   2.052e-01   1.425e-06        1
+    3030    2.275282e+03   3.723e-14   2.052e-01   1.423e-06        1
+    3040    2.275282e+03   4.374e-14   2.052e-01   1.422e-06        1
+    3050    2.275282e+03   5.303e-14   2.052e-01   1.420e-06        1
+    3060    2.275282e+03   5.812e-14   2.052e-01   1.418e-06        1
+    3070    2.275282e+03   5.201e-14   2.052e-01   1.417e-06        1
+    3080    2.275282e+03   4.648e-14   2.052e-01   1.415e-06        1
+    3090    2.275282e+03   3.865e-14   2.052e-01   1.414e-06        1
+    3100    2.275282e+03   5.085e-14   2.052e-01   1.412e-06        1
+    3110    2.275282e+03   4.106e-14   2.052e-01   1.411e-06        1
+    3120    2.275282e+03   4.009e-14   2.052e-01   1.409e-06        1
+    3130    2.275282e+03   4.910e-14   2.052e-01   1.407e-06        1
+    3140    2.275282e+03   5.614e-14   2.052e-01   1.406e-06        1
+    3150    2.275282e+03   4.029e-14   2.052e-01   1.404e-06        1
+    3160    2.275282e+03   5.315e-14   2.052e-01   1.403e-06        1
+    3170    2.275282e+03   4.424e-14   2.052e-01   1.401e-06        1
+    3180    2.275282e+03   4.702e-14   2.052e-01   1.400e-06        1
+    3190    2.275282e+03   4.792e-14   2.052e-01   1.398e-06        1
+    3200    2.275282e+03   5.056e-14   2.052e-01   1.397e-06        1
+    3210    2.275282e+03   4.123e-14   2.052e-01   1.395e-06        1
+    3220    2.275282e+03   4.330e-14   2.052e-01   1.393e-06        1
+    3230    2.275282e+03   4.802e-14   2.052e-01   1.392e-06        1
+    3240    2.275282e+03   5.075e-14   2.052e-01   1.390e-06        1
+    3250    2.275282e+03   3.854e-14   2.052e-01   1.389e-06        1
+    3260    2.275282e+03   4.130e-14   2.052e-01   1.387e-06        1
+    3270    2.275282e+03   5.627e-14   2.052e-01   1.386e-06        1
+    3280    2.275282e+03   4.895e-14   2.052e-01   1.384e-06        1
+    3290    2.275282e+03   4.789e-14   2.052e-01   1.383e-06        1
+    3300    2.275282e+03   3.793e-14   2.052e-01   1.381e-06        1
+    3310    2.275282e+03   3.311e-14   2.052e-01   1.380e-06        1
+    3320    2.275282e+03   4.864e-14   2.052e-01   1.378e-06        1
+    3330    2.275282e+03   4.949e-14   2.052e-01   1.377e-06        1
+    3340    2.275282e+03   3.561e-14   2.052e-01   1.375e-06        1
+    3350    2.275282e+03   5.118e-14   2.052e-01   1.374e-06        1
+    3360    2.275282e+03   4.514e-14   2.052e-01   1.372e-06        1
+    3370    2.275282e+03   4.013e-14   2.052e-01   1.371e-06        1
+    3380    2.275282e+03   3.506e-14   2.052e-01   1.369e-06        1
+    3390    2.275282e+03   4.663e-14   2.052e-01   1.368e-06        1
+    3400    2.275282e+03   4.620e-14   2.052e-01   1.366e-06        1
+    3410    2.275282e+03   4.949e-14   2.052e-01   1.365e-06        1
+    3420    2.275282e+03   4.452e-14   2.052e-01   1.363e-06        1
+    3430    2.275282e+03   4.627e-14   2.052e-01   1.362e-06        1
+    3440    2.275282e+03   5.018e-14   2.052e-01   1.360e-06        1
+    3450    2.275282e+03   3.630e-14   2.052e-01   1.359e-06        1
+    3460    2.275282e+03   3.933e-14   2.052e-01   1.357e-06        1
+    3470    2.275282e+03   4.963e-14   2.052e-01   1.356e-06        1
+    3480    2.275282e+03   4.684e-14   2.052e-01   1.354e-06        1
+    3490    2.275282e+03   4.695e-14   2.052e-01   1.353e-06        1
+    3500    2.275282e+03   4.724e-14   2.052e-01   1.351e-06        1
+    3510    2.275282e+03   5.314e-14   2.052e-01   1.350e-06        1
+    3520    2.275282e+03   5.088e-14   2.052e-01   1.349e-06        1
+    3530    2.275282e+03   3.773e-14   2.052e-01   1.347e-06        1
+    3540    2.275282e+03   4.617e-14   2.052e-01   1.346e-06        1
+    3550    2.275282e+03   3.676e-14   2.052e-01   1.344e-06        1
+    3560    2.275282e+03   4.699e-14   2.052e-01   1.343e-06        1
+    3570    2.275282e+03   4.276e-14   2.052e-01   1.341e-06        1
+    3580    2.275282e+03   5.096e-14   2.052e-01   1.340e-06        1
+    3590    2.275282e+03   4.848e-14   2.052e-01   1.338e-06        1
+    3600    2.275282e+03   4.742e-14   2.052e-01   1.337e-06        1
+    3610    2.275282e+03   4.069e-14   2.052e-01   1.336e-06        1
+    3620    2.275282e+03   5.257e-14   2.052e-01   1.334e-06        1
+    3630    2.275282e+03   4.786e-14   2.052e-01   1.333e-06        1
+    3640    2.275282e+03   4.226e-14   2.052e-01   1.331e-06        1
+    3650    2.275282e+03   4.845e-14   2.052e-01   1.330e-06        1
+    3660    2.275282e+03   5.025e-14   2.052e-01   1.328e-06        1
+    3670    2.275282e+03   5.017e-14   2.052e-01   1.327e-06        1
+    3680    2.275282e+03   5.017e-14   2.052e-01   1.326e-06        1
+    3690    2.275282e+03   4.383e-14   2.052e-01   1.324e-06        1
+    3700    2.275282e+03   3.843e-14   2.052e-01   1.323e-06        1
+    3710    2.275282e+03   3.882e-14   2.052e-01   1.321e-06        1
+    3720    2.275282e+03   4.194e-14   2.052e-01   1.320e-06        1
+    3730    2.275282e+03   4.233e-14   2.052e-01   1.318e-06        1
+    3740    2.275282e+03   5.081e-14   2.052e-01   1.317e-06        1
+    3750    2.275282e+03   4.836e-14   2.052e-01   1.316e-06        1
+    3760    2.275282e+03   3.812e-14   2.052e-01   1.314e-06        1
+    3770    2.275282e+03   4.494e-14   2.052e-01   1.313e-06        1
+    3780    2.275282e+03   5.113e-14   2.052e-01   1.311e-06        1
+    3790    2.275282e+03   4.900e-14   2.052e-01   1.310e-06        1
+    3800    2.275282e+03   4.044e-14   2.052e-01   1.309e-06        1
+    3810    2.275282e+03   3.549e-14   2.052e-01   1.307e-06        1
+    3820    2.275282e+03   4.217e-14   2.052e-01   1.306e-06        1
+    3830    2.275282e+03   5.004e-14   2.052e-01   1.305e-06        1
+    3840    2.275282e+03   4.820e-14   2.052e-01   1.303e-06        1
+    3850    2.275282e+03   4.176e-14   2.052e-01   1.302e-06        1
+    3860    2.275282e+03   5.622e-14   2.052e-01   1.300e-06        1
+    3870    2.275282e+03   4.037e-14   2.052e-01   1.299e-06        1
+    3880    2.275282e+03   4.227e-14   2.052e-01   1.298e-06        1
+    3890    2.275282e+03   4.634e-14   2.052e-01   1.296e-06        1
+    3900    2.275282e+03   3.982e-14   2.052e-01   1.295e-06        1
+    3910    2.275282e+03   3.962e-14   2.052e-01   1.294e-06        1
+    3920    2.275282e+03   5.218e-14   2.052e-01   1.292e-06        1
+    3930    2.275282e+03   3.848e-14   2.052e-01   1.291e-06        1
+    3940    2.275282e+03   4.068e-14   2.052e-01   1.290e-06        1
+    3950    2.275282e+03   4.714e-14   2.052e-01   1.288e-06        1
+    3960    2.275282e+03   3.947e-14   2.052e-01   1.287e-06        1
+    3970    2.275282e+03   5.040e-14   2.052e-01   1.285e-06        1
+    3980    2.275282e+03   5.394e-14   2.052e-01   1.284e-06        1
+    3990    2.275282e+03   5.533e-14   2.052e-01   1.283e-06        1
+    4000    2.275282e+03   4.721e-14   2.052e-01   1.281e-06        1
+    4010    2.275282e+03   4.491e-14   2.052e-01   1.280e-06        1
+    4020    2.275282e+03   4.415e-14   2.052e-01   1.279e-06        1
+    4030    2.275282e+03   5.600e-14   2.052e-01   1.277e-06        1
+    4040    2.275282e+03   3.832e-14   2.052e-01   1.276e-06        1
+    4050    2.275282e+03   3.986e-14   2.052e-01   1.275e-06        1
+    4060    2.275282e+03   4.853e-14   2.052e-01   1.273e-06        1
+    4070    2.275282e+03   4.453e-14   2.052e-01   1.272e-06        1
+    4080    2.275282e+03   5.722e-14   2.052e-01   1.271e-06        1
+    4090    2.275282e+03   4.825e-14   2.052e-01   1.269e-06        1
+    4100    2.275282e+03   5.240e-14   2.052e-01   1.268e-06        1
+    4110    2.275282e+03   4.967e-14   2.052e-01   1.267e-06        1
+    4120    2.275282e+03   4.063e-14   2.052e-01   1.266e-06        1
+    4130    2.275282e+03   4.989e-14   2.052e-01   1.264e-06        1
+    4140    2.275282e+03   5.244e-14   2.052e-01   1.263e-06        1
+    4150    2.275282e+03   4.076e-14   2.052e-01   1.262e-06        1
+    4160    2.275282e+03   4.101e-14   2.052e-01   1.260e-06        1
+    4170    2.275282e+03   4.936e-14   2.052e-01   1.259e-06        1
+    4180    2.275282e+03   4.981e-14   2.052e-01   1.258e-06        1
+    4190    2.275282e+03   4.043e-14   2.052e-01   1.256e-06        1
+    4200    2.275282e+03   5.156e-14   2.052e-01   1.255e-06        1
+    4210    2.275282e+03   4.566e-14   2.052e-01   1.254e-06        1
+    4220    2.275282e+03   5.267e-14   2.052e-01   1.253e-06        1
+    4230    2.275282e+03   4.728e-14   2.052e-01   1.251e-06        1
+    4240    2.275282e+03   4.428e-14   2.052e-01   1.250e-06        1
+    4250    2.275282e+03   3.671e-14   2.052e-01   1.249e-06        1
+    4260    2.275282e+03   5.468e-14   2.052e-01   1.247e-06        1
+    4270    2.275282e+03   4.584e-14   2.052e-01   1.246e-06        1
+    4280    2.275282e+03   3.907e-14   2.052e-01   1.245e-06        1
+    4290    2.275282e+03   5.285e-14   2.052e-01   1.244e-06        1
+    4300    2.275282e+03   4.231e-14   2.052e-01   1.242e-06        1
+    4310    2.275282e+03   5.143e-14   2.052e-01   1.241e-06        1
+    4320    2.275282e+03   5.108e-14   2.052e-01   1.240e-06        1
+    4330    2.275282e+03   4.052e-14   2.052e-01   1.238e-06        1
+    4340    2.275282e+03   4.809e-14   2.052e-01   1.237e-06        1
+    4350    2.275282e+03   4.151e-14   2.052e-01   1.236e-06        1
+    4360    2.275282e+03   4.390e-14   2.052e-01   1.235e-06        1
+    4370    2.275282e+03   4.002e-14   2.052e-01   1.233e-06        1
+    4380    2.275282e+03   4.674e-14   2.052e-01   1.232e-06        1
+    4390    2.275282e+03   4.648e-14   2.052e-01   1.231e-06        1
+    4400    2.275282e+03   3.923e-14   2.052e-01   1.230e-06        1
+    4410    2.275282e+03   4.360e-14   2.052e-01   1.228e-06        1
+    4420    2.275282e+03   3.257e-14   2.052e-01   1.227e-06        1
+    4430    2.275282e+03   5.192e-14   2.052e-01   1.226e-06        1
+    4440    2.275282e+03   4.891e-14   2.052e-01   1.225e-06        1
+    4450    2.275282e+03   4.437e-14   2.052e-01   1.223e-06        1
+    4460    2.275282e+03   4.778e-14   2.052e-01   1.222e-06        1
+    4470    2.275282e+03   4.387e-14   2.052e-01   1.221e-06        1
+    4480    2.275282e+03   4.029e-14   2.052e-01   1.220e-06        1
+    4490    2.275282e+03   5.064e-14   2.052e-01   1.219e-06        1
+    4500    2.275282e+03   4.380e-14   2.052e-01   1.217e-06        1
+    4510    2.275282e+03   4.208e-14   2.052e-01   1.216e-06        1
+    4520    2.275282e+03   4.154e-14   2.052e-01   1.215e-06        1
+    4530    2.275282e+03   5.027e-14   2.052e-01   1.214e-06        1
+    4540    2.275282e+03   5.788e-14   2.052e-01   1.212e-06        1
+    4550    2.275282e+03   4.574e-14   2.052e-01   1.211e-06        1
+    4560    2.275282e+03   4.947e-14   2.052e-01   1.210e-06        1
+    4570    2.275282e+03   4.269e-14   2.052e-01   1.209e-06        1
+    4580    2.275282e+03   4.523e-14   2.052e-01   1.208e-06        1
+    4590    2.275282e+03   4.471e-14   2.052e-01   1.206e-06        1
+    4600    2.275282e+03   4.403e-14   2.052e-01   1.205e-06        1
+    4610    2.275282e+03   4.625e-14   2.052e-01   1.204e-06        1
+    4620    2.275282e+03   5.068e-14   2.052e-01   1.203e-06        1
+    4630    2.275282e+03   4.437e-14   2.052e-01   1.201e-06        1
+    4640    2.275282e+03   3.364e-14   2.052e-01   1.200e-06        1
+    4650    2.275282e+03   5.017e-14   2.052e-01   1.199e-06        1
+    4660    2.275282e+03   3.375e-14   2.052e-01   1.198e-06        1
+    4670    2.275282e+03   4.449e-14   2.052e-01   1.197e-06        1
+    4680    2.275282e+03   4.712e-14   2.052e-01   1.195e-06        1
+    4690    2.275282e+03   4.828e-14   2.052e-01   1.194e-06        1
+    4700    2.275282e+03   3.438e-14   2.052e-01   1.193e-06        1
+    4710    2.275282e+03   4.639e-14   2.052e-01   1.192e-06        1
+    4720    2.275282e+03   4.488e-14   2.052e-01   1.191e-06        1
+    4730    2.275282e+03   4.467e-14   2.052e-01   1.190e-06        1
+    4740    2.275282e+03   4.029e-14   2.052e-01   1.188e-06        1
+    4750    2.275282e+03   4.781e-14   2.052e-01   1.187e-06        1
+    4760    2.275282e+03   4.520e-14   2.052e-01   1.186e-06        1
+    4770    2.275282e+03   4.846e-14   2.052e-01   1.185e-06        1
+    4780    2.275282e+03   4.705e-14   2.052e-01   1.184e-06        1
+    4790    2.275282e+03   4.653e-14   2.052e-01   1.182e-06        1
+    4800    2.275282e+03   4.703e-14   2.052e-01   1.181e-06        1
+    4810    2.275282e+03   4.388e-14   2.052e-01   1.180e-06        1
+    4820    2.275282e+03   5.429e-14   2.052e-01   1.179e-06        1
+    4830    2.275282e+03   4.981e-14   2.052e-01   1.178e-06        1
+    4840    2.275282e+03   4.900e-14   2.052e-01   1.177e-06        1
+    4850    2.275282e+03   4.149e-14   2.052e-01   1.175e-06        1
+    4860    2.275282e+03   3.422e-14   2.052e-01   1.174e-06        1
+    4870    2.275282e+03   4.703e-14   2.052e-01   1.173e-06        1
+    4880    2.275282e+03   3.945e-14   2.052e-01   1.172e-06        1
+    4890    2.275282e+03   4.642e-14   2.052e-01   1.171e-06        1
+    4900    2.275282e+03   5.006e-14   2.052e-01   1.170e-06        1
+    4910    2.275282e+03   5.206e-14   2.052e-01   1.169e-06        1
+    4920    2.275282e+03   5.129e-14   2.052e-01   1.167e-06        1
+    4930    2.275282e+03   4.807e-14   2.052e-01   1.166e-06        1
+    4940    2.275282e+03   5.025e-14   2.052e-01   1.165e-06        1
+    4950    2.275282e+03   3.764e-14   2.052e-01   1.164e-06        1
+    4960    2.275282e+03   4.510e-14   2.052e-01   1.163e-06        1
+    4970    2.275282e+03   3.539e-14   2.052e-01   1.162e-06        1
+    4980    2.275282e+03   4.924e-14   2.052e-01   1.161e-06        1
+    4990    2.275282e+03   4.587e-14   2.052e-01   1.159e-06        1
+    5000    2.275282e+03   4.979e-14   2.052e-01   1.158e-06        1
+    5010    2.275282e+03   5.042e-14   2.052e-01   1.157e-06        1
+    5020    2.275282e+03   4.641e-14   2.052e-01   1.156e-06        1
+    5030    2.275282e+03   3.901e-14   2.052e-01   1.155e-06        1
+    5040    2.275282e+03   4.571e-14   2.052e-01   1.154e-06        1
+    5050    2.275282e+03   4.766e-14   2.052e-01   1.153e-06        1
+    5060    2.275282e+03   4.709e-14   2.052e-01   1.152e-06        1
+    5070    2.275282e+03   4.022e-14   2.052e-01   1.150e-06        1
+    5080    2.275282e+03   4.885e-14   2.052e-01   1.149e-06        1
+    5090    2.275282e+03   3.976e-14   2.052e-01   1.148e-06        1
+    5100    2.275282e+03   5.783e-14   2.052e-01   1.147e-06        1
+    5110    2.275282e+03   4.446e-14   2.052e-01   1.146e-06        1
+    5120    2.275282e+03   5.890e-14   2.052e-01   1.145e-06        1
+    5130    2.275282e+03   4.104e-14   2.052e-01   1.144e-06        1
+    5140    2.275282e+03   4.814e-14   2.052e-01   1.143e-06        1
+    5150    2.275282e+03   5.278e-14   2.052e-01   1.142e-06        1
+    5160    2.275282e+03   4.031e-14   2.052e-01   1.140e-06        1
+    5170    2.275282e+03   4.990e-14   2.052e-01   1.139e-06        1
+    5180    2.275282e+03   4.714e-14   2.052e-01   1.138e-06        1
+    5190    2.275282e+03   4.537e-14   2.052e-01   1.137e-06        1
+    5200    2.275282e+03   4.242e-14   2.052e-01   1.136e-06        1
+    5210    2.275282e+03   4.086e-14   2.052e-01   1.135e-06        1
+    5220    2.275282e+03   3.822e-14   2.052e-01   1.134e-06        1
+    5230    2.275282e+03   4.838e-14   2.052e-01   1.133e-06        1
+    5240    2.275282e+03   4.538e-14   2.052e-01   1.132e-06        1
+    5250    2.275282e+03   4.187e-14   2.052e-01   1.131e-06        1
+    5260    2.275282e+03   4.237e-14   2.052e-01   1.129e-06        1
+    5270    2.275282e+03   4.714e-14   2.052e-01   1.128e-06        1
+    5280    2.275282e+03   4.684e-14   2.052e-01   1.127e-06        1
+    5290    2.275282e+03   4.249e-14   2.052e-01   1.126e-06        1
+    5300    2.275282e+03   4.245e-14   2.052e-01   1.125e-06        1
+    5310    2.275282e+03   4.208e-14   2.052e-01   1.124e-06        1
+    5320    2.275282e+03   4.760e-14   2.052e-01   1.123e-06        1
+    5330    2.275282e+03   3.905e-14   2.052e-01   1.122e-06        1
+    5340    2.275282e+03   4.131e-14   2.052e-01   1.121e-06        1
+    5350    2.275282e+03   4.310e-14   2.052e-01   1.120e-06        1
+    5360    2.275282e+03   4.900e-14   2.052e-01   1.119e-06        1
+    5370    2.275282e+03   3.569e-14   2.052e-01   1.118e-06        1
+    5380    2.275282e+03   4.866e-14   2.052e-01   1.117e-06        1
+    5390    2.275282e+03   3.221e-14   2.052e-01   1.116e-06        1
+    5400    2.275282e+03   4.412e-14   2.052e-01   1.114e-06        1
+    5410    2.275282e+03   4.621e-14   2.052e-01   1.113e-06        1
+    5420    2.275282e+03   4.712e-14   2.052e-01   1.112e-06        1
+    5430    2.275282e+03   4.639e-14   2.052e-01   1.111e-06        1
+    5440    2.275282e+03   3.567e-14   2.052e-01   1.110e-06        1
+    5450    2.275282e+03   4.771e-14   2.052e-01   1.109e-06        1
+    5460    2.275282e+03   4.753e-14   2.052e-01   1.108e-06        1
+    5470    2.275282e+03   5.058e-14   2.052e-01   1.107e-06        1
+    5480    2.275282e+03   4.978e-14   2.052e-01   1.106e-06        1
+    5490    2.275282e+03   4.646e-14   2.052e-01   1.105e-06        1
+    5500    2.275282e+03   4.470e-14   2.052e-01   1.104e-06        1
+    5510    2.275282e+03   4.682e-14   2.052e-01   1.103e-06        1
+    5520    2.275282e+03   4.492e-14   2.052e-01   1.102e-06        1
+    5530    2.275282e+03   4.761e-14   2.052e-01   1.101e-06        1
+    5540    2.275282e+03   5.011e-14   2.052e-01   1.100e-06        1
+    5550    2.275282e+03   4.526e-14   2.052e-01   1.099e-06        1
+    5560    2.275282e+03   5.097e-14   2.052e-01   1.098e-06        1
+    5570    2.275282e+03   5.419e-14   2.052e-01   1.097e-06        1
+    5580    2.275282e+03   5.186e-14   2.052e-01   1.096e-06        1
+    5590    2.275282e+03   3.886e-14   2.052e-01   1.095e-06        1
+    5600    2.275282e+03   5.408e-14   2.052e-01   1.094e-06        1
+    5610    2.275282e+03   5.031e-14   2.052e-01   1.093e-06        1
+    5620    2.275282e+03   4.696e-14   2.052e-01   1.092e-06        1
+    5630    2.275282e+03   4.466e-14   2.052e-01   1.090e-06        1
+    5640    2.275282e+03   4.068e-14   2.052e-01   1.089e-06        1
+    5650    2.275282e+03   4.560e-14   2.052e-01   1.088e-06        1
+    5660    2.275282e+03   5.261e-14   2.052e-01   1.087e-06        1
+    5670    2.275282e+03   5.133e-14   2.052e-01   1.086e-06        1
+    5680    2.275282e+03   4.978e-14   2.052e-01   1.085e-06        1
+    5690    2.275282e+03   5.308e-14   2.052e-01   1.084e-06        1
+    5700    2.275282e+03   4.879e-14   2.052e-01   1.083e-06        1
+    5710    2.275282e+03   4.238e-14   2.052e-01   1.082e-06        1
+    5720    2.275282e+03   4.952e-14   2.052e-01   1.081e-06        1
+    5730    2.275282e+03   4.906e-14   2.052e-01   1.080e-06        1
+    5740    2.275282e+03   4.506e-14   2.052e-01   1.079e-06        1
+    5750    2.275282e+03   3.687e-14   2.052e-01   1.078e-06        1
+    5760    2.275282e+03   4.657e-14   2.052e-01   1.077e-06        1
+    5770    2.275282e+03   4.821e-14   2.052e-01   1.076e-06        1
+    5780    2.275282e+03   4.818e-14   2.052e-01   1.075e-06        1
+    5790    2.275282e+03   4.613e-14   2.052e-01   1.074e-06        1
+    5800    2.275282e+03   4.201e-14   2.052e-01   1.073e-06        1
+    5810    2.275282e+03   4.516e-14   2.052e-01   1.072e-06        1
+    5820    2.275282e+03   5.095e-14   2.052e-01   1.071e-06        1
+    5830    2.275282e+03   5.200e-14   2.052e-01   1.070e-06        1
+    5840    2.275282e+03   5.047e-14   2.052e-01   1.069e-06        1
+    5850    2.275282e+03   4.124e-14   2.052e-01   1.068e-06        1
+    5860    2.275282e+03   4.578e-14   2.052e-01   1.067e-06        1
+    5870    2.275282e+03   4.864e-14   2.052e-01   1.066e-06        1
+    5880    2.275282e+03   5.071e-14   2.052e-01   1.065e-06        1
+    5890    2.275282e+03   4.953e-14   2.052e-01   1.064e-06        1
+    5900    2.275282e+03   4.262e-14   2.052e-01   1.063e-06        1
+    5910    2.275282e+03   4.764e-14   2.052e-01   1.062e-06        1
+    5920    2.275282e+03   5.004e-14   2.052e-01   1.061e-06        1
+    5930    2.275282e+03   4.584e-14   2.052e-01   1.060e-06        1
+    5940    2.275282e+03   4.266e-14   2.052e-01   1.060e-06        1
+    5950    2.275282e+03   4.739e-14   2.052e-01   1.059e-06        1
+    5960    2.275282e+03   4.716e-14   2.052e-01   1.058e-06        1
+    5970    2.275282e+03   4.617e-14   2.052e-01   1.057e-06        1
+    5980    2.275282e+03   4.660e-14   2.052e-01   1.056e-06        1
+    5990    2.275282e+03   5.267e-14   2.052e-01   1.055e-06        1
+    6000    2.275282e+03   5.146e-14   2.052e-01   1.054e-06        1
+    6010    2.275282e+03   4.810e-14   2.052e-01   1.053e-06        1
+    6020    2.275282e+03   4.569e-14   2.052e-01   1.052e-06        1
+    6030    2.275282e+03   3.915e-14   2.052e-01   1.051e-06        1
+    6040    2.275282e+03   4.398e-14   2.052e-01   1.050e-06        1
+    6050    2.275282e+03   4.921e-14   2.052e-01   1.049e-06        1
+    6060    2.275282e+03   4.849e-14   2.052e-01   1.048e-06        1
+    6070    2.275282e+03   4.081e-14   2.052e-01   1.047e-06        1
+    6080    2.275282e+03   5.240e-14   2.052e-01   1.046e-06        1
+BARON 24.5.8 (2024.05.08): 1 iterations, CPU time limit reached.
+Objective 1e+51
+Retaining scratch directory "/tmp/baron_tmp92619".
+---------------------------- Container and geometric considerations ----------------------------
+Container type: cube
+Structural conservation type: volume
+---------------------------- Solution execution data ----------------------------
+solve_result_num = 402
+solve_result = limit
+
+---------------------------- Solution data ----------------------------
+card(figures) = 125
+
+coords [*,*,1]
+:        1         2         3         4       :=
+1     21.3062   21.3062   20.6369   21.1167
+2     19.6997   20.0719   20.0524   20.285
+3     18.6939   18.6942   20.0102   19.8595
+4     19.1467   18.6938   18.6938   19.5798
+5     18.7617   18.6938   18.6938   19.546
+6     20.3951   19.988    21.2559   21.3062
+7     19.5598   19.6949   18.7108   19.2247
+8     20.2286   21.3062   20.8788   20.4805
+9     20.1243   20.9619   20.6017   19.867
+10    20.4192   19.9784   19.8789   20.5736
+11    18.6938   18.6938   19.5758   18.6938
+12    18.6986   19.2657   19.9155   19.5386
+13    19.9165   21.2352   20.8327   20.4783
+14    20.5627   21.3062   21.3062   21.3062
+15    20.6183   21.3062   20.657    21.3048
+16    20.4058   19.8848   19.477    19.5739
+17    19.4631   18.6938   18.7147   19.6917
+18    19.7866   19.8447   19.9154   18.8538
+19    20.3995   19.9225   19.7836   20.3082
+20    19.5623   20.0911   19.4373   20.3075
+21    19.2179   20.0448   19.7946   20.3362
+22    19.219    19.7092   18.6938   18.8191
+23    21.3062   21.3062   21.3062   20.21
+24    20.0642   18.9423   19.8375   20.2442
+25    19.7512   20.413    20.2135   19.1393
+26    20.5939   21.3062   21.3062   21.3062
+27    19.2754   18.6938   18.7213   19.6917
+28    20.4996   20.3591   20.1632   20.8617
+29    20.6474   21.0538   21.2739   19.9496
+30    21.3062   20.1525   21.3055   21.3062
+31    19.8004   20.4104   20.4972   20.8327
+32    21.3062   20.2604   21.3062   21.0133
+33    21.0415   20.2807   19.6883   19.95
+34    19.9325   19.8487   18.8165   19.9653
+35    18.6938   18.6938   19.7017   18.6938
+36    19.8605   19.5558   19.6739   18.8453
+37    19.8398   20.6889   20.3916   19.6845
+38    21.2423   19.98     21.3062   21.0513
+39    19.6214   20.3618   20.0714   19.8165
+40    19.3294   19.1393   20.2688   19.4793
+41    19.5887   18.6938   19.3901   18.7118
+42    21.3062   21.188    21.2073   20.1791
+43    19.6742   19.2361   18.714    19.6841
+44    19.5588   20.2314   20.6489   19.9868
+45    18.6938   19.3249   18.6938   18.6938
+46    21.3062   20.4928   21.2376   20.5452
+47    20.4123   20.0692   20.3354   19.8029
+48    20.5939   21.3062   20.2913   21.3062
+49    20.091    19.3747   20.3075   19.477
+50    19.3249   19.2195   18.8289   18.6938
+51    20.6183   21.3062   21.3062   21.3062
+52    18.8361   19.7049   20.0019   19.5748
+53    19.3352   19.6848   18.6938   19.6713
+54    21.3062   20.4923   20.559    20.551
+55    18.6938   19.3739   18.7529   18.6938
+56    19.9761   20.6229   20.6881   21.3062
+57    19.1817   19.2625   18.6938   18.6938
+58    21.1169   20.0415   20.6345   20.1168
+59    18.6938   19.6917   18.7166   18.6957
+60    19.5974   19.3662   19.699    20.2135
+61    20.3991   20.5673   21.1953   19.9988
+62    18.7238   19.5478   19.1467   19.5905
+63    19.8625   19.8758   19.6608   18.8453
+64    18.6938   18.8165   19.7742   19.7703
+65    19.8629   19.3434   18.7121   18.7272
+66    20.5466   21.183    20.1442   21.0736
+67    19.4258   18.7251   19.8629   19.5485
+68    18.6938   18.6938   19.7017   19.5928
+69    20.5236   20.083    21.2015   20.5065
+70    18.8191   18.8347   19.4534   20.0292
+71    19.9985   20.2276   20.4923   20.0678
+72    20.3516   21.3062   21.3062   21.3062
+73    19.5558   19.6739   18.6938   18.8453
+74    21.3062   19.9791   20.9701   19.9659
+75    18.6938   18.6938   19.4649   18.6938
+76    21.3062   19.9419   20.2061   20.7564
+77    19.546    18.796    19.7627   18.6938
+78    20.3384   21.3062   20.3001   21.2452
+79    20.6183   21.3062   21.3062   21.3062
+80    19.5599   20.0773   19.9436   19.1353
+81    20.3352   20.2309   19.7946   20.5434
+82    19.9045   19.1001   19.2601   19.698
+83    18.6938   19.2606   18.6938   18.6938
+84    21.3062   20.657    20.6183   20.6033
+85    21.3061   20.2744   21.2521   20.4974
+86    20.6355   20.091    20.5835   19.6716
+87    19.546    18.6938   18.8289   18.6938
+88    20.3147   19.9752   19.4364   19.9338
+89    19.2754   18.6938   18.6938   18.6938
+90    20.3362   20.2955   20.5434   21.3016
+91    21.2936   20.6224   21.2258   20.1401
+92    20.6199   20.6109   21.3062   21.3062
+93    18.6938   19.5758   18.6938   18.6938
+94    18.8279   18.6938   18.6938   19.6172
+95    19.5863   19.6186   19.8629   20.6083
+96    18.6938   18.8279   19.3241   19.6173
+97    19.7936   20.3081   20.6805   20.3995
+98    19.988    21.2559   20.5838   20.1232
+99    19.5649   19.7009   19.7986   18.8637
+100   20.2201   20.0503   20.559    20.4819
+101   20.5627   21.3062   21.3062   20.4545
+102   19.1393   20.2135   19.3799   19.7512
+103   19.7922   20.4995   19.6771   19.697
+104   21.2739   20.6474   19.9495   20.7555
+105   18.9048   19.4903   20.088    19.4472
+106   21.3062   21.3036   20.6787   20.3362
+107   18.6938   18.6938   18.6938   19.3249
+108   18.8037   19.2281   19.2915   19.7346
+109   18.6938   19.7096   19.2606   19.2217
+110   20.6369   21.3062   21.3062   21.3062
+111   19.4368   19.5896   20.2813   20.1721
+112   21.1769   20.1732   20.1687   20.5582
+113   20.5136   19.7051   19.9751   19.8033
+114   19.3728   18.712    19.4048   19.5889
+115   20.6033   20.657    20.6183   19.9163
+116   21.0895   19.991    21.3062   21.3062
+117   20.088    20.0665   19.4472   19.4903
+118   21.3062   21.3062   21.3062   20.7185
+119   19.9849   20.4136   21.0899   20.2749
+120   19.7512   19.8436   19.1393   20.413
+121   21.3062   20.9501   21.3062   19.9791
+122   21.1562   20.4965   20.4131   21.3062
+123   20.7555   21.2739   21.3062   19.9495
+124   19.5955   18.6938   18.6938   18.6938
+125   20.144    21.3062   21.1868   21.3062
+
+ [*,*,2]
+:        1         2         3         4       :=
+1     19.9988   21.3062   20.5241   21.0176
+2     20.6159   21.1829   20.8808   19.8618
+3     18.6938   19.104    18.6938   19.3814
+4     19.7416   18.6938   19.9108   19.3637
+5     20.2181   21.3062   21.3062   21.3062
+6     20.409    21.3062   20.8186   21.3062
+7     20.9259   20.2235   20.1668   20.2768
+8     20.1351   20.3416   20.348    21.2638
+9     20.3847   20.994    20.1093   20.1684
+10    18.6938   19.0204   19.0513   19.8007
+11    18.6938   19.9107   19.3661   19.102
+12    19.3052   18.6938   19.6552   19.2799
+13    21.3062   21.3062   21.3062   20.2821
+14    20.5401   21.3062   20.4286   21.3062
+15    18.6939   19.8039   19.7942   19.7501
+16    20.3146   20.1717   19.9183   19.329
+17    18.6938   18.6938   18.6938   19.3665
+18    19.6466   19.1547   19.1311   18.7086
+19    19.4692   19.0378   20.0523   19.5253
+20    19.4008   19.5948   19.812    20.5011
+21    18.8717   19.1564   18.6938   19.6776
+22    21.1945   20.0687   19.9296   20.542
+23    19.3312   19.9736   19.6216   19.2001
+24    18.6938   18.6938   19.1498   18.6938
+25    20.8246   21.3062   20.7472   21.3062
+26    19.3533   18.6938   18.6938   19.6335
+27    19.7911   19.2556   18.6938   19.3665
+28    21.2199   20.5659   19.9507   20.3873
+29    20.2028   21.0609   20.6191   20.2368
+30    20.8963   20.2049   19.536    20.1963
+31    21.3062   21.3032   20.3319   21.3062
+32    18.6938   18.9032   19.7958   19.2977
+33    18.6938   19.8148   18.6938   18.6938
+34    19.194    19.1024   18.6938   18.6938
+35    19.7546   20.4738   20.1091   20.1407
+36    19.9773   19.2826   19.6042   19.9163
+37    20.2379   20.0246   20.2978   19.4601
+38    19.8935   20.1569   20.5325   20.279
+39    19.9926   20.5692   20.3572   21.2748
+40    20.2692   21.3062   20.9539   20.1338
+41    20.7967   20.5      19.8939   19.7331
+42    20.2724   19.6048   19.9225   20.1858
+43    19.6045   20.2795   19.964    20.2676
+44    19.3946   20.385    19.9689   19.2394
+45    20.2291   20.2938   20.4688   19.2794
+46    21.3062   21.3062   20.3868   20.5753
+47    21.3032   20.38     20.543    21.3052
+48    19.3533   18.6938   18.6938   18.6938
+49    19.5947   19.8554   20.5011   20.2717
+50    20.2938   21.3062   20.3211   21.3062
+51    18.6939   19.7529   19.8038   18.6938
+52    18.6938   19.563    18.6938   18.6938
+53    19.4926   20.271    19.9108   19.5116
+54    21.3062   21.3062   21.3062   20.5731
+55    20.5025   19.8836   19.1259   19.662
+56    20.1577   20.2302   18.9774   19.8802
+57    20.9026   21.304    21.3062   20.1059
+58    19.5907   18.8705   20.1132   20.1421
+59    18.6938   19.3665   18.6951   19.2106
+60    19.745    20.4721   20.8333   20.7472
+61    18.6938   19.815    19.3626   19.0118
+62    18.6938   19.423    19.7416   19.3542
+63    19.9774   20.6261   19.6091   19.9163
+64    18.6938   18.6938   19.4786   18.6938
+65    19.8004   19.846    19.7334   19.0957
+66    19.866    19.7075   18.8066   19.3633
+67    19.8388   19.0944   19.8003   18.8377
+68    20.1678   20.4738   20.109    20.7514
+69    19.8171   19.0365   19.3644   19.6158
+70    20.5415   21.3062   20.2036   21.1179
+71    21.1855   20.1636   21.3062   21.1834
+72    20.5718   21.3062   20.5325   20.4286
+73    19.2826   19.6042   19.3034   19.9163
+74    18.6938   18.6938   19.4924   19.016
+75    20.5293   21.3062   20.6684   20.1678
+76    20.0411   20.2379   19.6289   19.7495
+77    21.3062   20.2657   21.2248   21.3062
+78    19.6754   18.6938   18.6941   19.3412
+79    18.6938   18.6938   19.8038   18.6938
+80    20.0854   21.3062   21.2142   21.3062
+81    19.6759   18.6938   18.6938   18.6938
+82    21.3062   21.3062   21.3062   20.0846
+83    21.3062   21.3062   20.0679   21.3062
+84    18.6938   19.7944   18.6938   18.6938
+85    20.8555   20.4201   19.4993   20.2624
+86    20.2621   19.5947   19.1508   19.4409
+87    21.3062   21.3062   20.3211   21.3062
+88    19.6194   19.2      19.013    20.1507
+89    19.7911   18.6938   19.9108   19.2557
+90    19.6776   18.6941   18.6938   18.6938
+91    19.6297   20.1014   19.9169   19.1401
+92    20.5639   19.7732   19.7069   20.0764
+93    18.6938   19.3661   19.9107   18.6938
+94    20.2229   19.9108   19.2794   19.7208
+95    18.9533   19.5579   19.8003   19.1247
+96    19.2794   20.2229   20.2924   19.7208
+97    20.0853   19.5253   20.0296   19.4692
+98    21.3062   20.8187   20.3036   20.4702
+99    20.9286   19.9756   21.2778   20.4154
+100   20.1336   21.3062   21.3062   21.2825
+101   20.5401   21.3062   21.3062   21.3062
+102   21.3062   20.7472   20.4765   20.8246
+103   21.3062   20.391    20.0523   20.0119
+104   20.6191   20.2028   20.2368   19.7491
+105   21.2785   20.138    21.3062   21.3062
+106   20.0411   19.2962   19.7136   19.6776
+107   20.4688   20.2291   21.3062   20.2938
+108   20.2594   20.2969   21.3062   21.2266
+109   20.0443   20.0607   21.293    21.0577
+110   20.5241   19.9988   20.8425   21.3062
+111   19.9517   20.7983   19.6518   20.4881
+112   19.7068   20.192    18.8258   19.8713
+113   20.3658   20.0566   21.3036   20.4956
+114   19.8822   19.7334   19.7737   20.7969
+115   18.6938   19.7949   18.6938   18.9114
+116   20.6448   21.3061   21.3062   21.3062
+117   21.3062   21.1746   21.3062   20.138
+118   19.9988   19.7068   20.8426   20.4245
+119   20.2631   21.306    21.0871   20.4943
+120   20.8246   21.3062   21.3062   21.3062
+121   18.6938   19.5399   18.6938   18.6938
+122   21.0657   20.3408   21.3062   21.3062
+123   19.7491   20.6191   20.0411   20.2368
+124   19.1438   18.6938   19.1726   20.0722
+125   19.1398   18.6938   19.5833   19.3312
+
+ [*,*,3]
+:        1         2         3         4       :=
+1     21.0273   20.5906   20.1846   21.3062
+2     18.6938   18.6938   19.8989   19.0004
+3     19.1029   18.6938   18.6938   19.3647
+4     20.1109   19.796    19.7846   19.1421
+5     20.323    19.7013   20.4639   20.6406
+6     20.2739   20.1894   19.9559   20.5905
+7     20.5002   19.8604   20.3157   21.1551
+8     19.5239   19.5984   18.9945   19.9446
+9     20.2579   21.1673   20.1735   21.3062
+10    20.3577   20.6263   19.3784   20.1174
+11    19.1372   19.7846   19.1449   18.6956
+12    20.7757   20.975    20.2311   21.3062
+13    20.1676   20.5689   20.97     20.2936
+14    18.9056   19.7776   19.6513   18.6938
+15    20.662    21.1034   20.2475   20.1339
+16    19.8814   20.8697   19.5777   19.995
+17    20.9198   21.1347   19.7623   20.4625
+18    20.278    20.4434   19.1194   19.8906
+19    21.1192   19.9258   20.8485   19.745
+20    19.9443   18.6938   19.4672   19.7095
+21    21.3062   20.2408   21.3062   21.3062
+22    19.2327   19.6338   19.3883   18.6938
+23    18.6938   18.7295   19.714    19.0459
+24    20.7119   19.9112   20.4394   19.4583
+25    20.1972   21.3062   21.1717   21.3062
+26    19.4218   20.3801   19.3236   19.719
+27    20.2028   20.7898   19.7512   20.4625
+28    19.899    18.6938   19.4796   19.0352
+29    20.2678   21.267    21.3062   21.3062
+30    19.9354   19.634    19.9847   19.5101
+31    20.0661   21.3021   20.328    20.97
+32    20.3801   19.5069   19.6049   20.3656
+33    19.2723   19.5265   19.0101   19.527
+34    20.4876   19.1148   19.9197   19.5553
+35    19.3663   19.4755   19.753    20.4004
+36    21.3062   21.3062   20.2765   21.3062
+37    21.1072   20.3171   19.8833   19.9798
+38    18.6938   18.6938   18.6938   19.5525
+39    20.3716   20.1668   21.0893   20.0927
+40    21.3062   21.3062   21.3062   20.6659
+41    18.6938   18.6938   19.7163   18.6938
+42    19.4555   19.9485   18.7652   19.6447
+43    20.2766   21.1521   19.916    20.1964
+44    19.9444   19.7303   20.248    19.284
+45    21.3062   21.3062   20.266    20.7534
+46    19.7776   20.0328   19.575    18.8927
+47    21.3062   21.0563   20.262    20.0699
+48    19.4218   19.3236   19.4473   20.3801
+49    18.6938   19.5705   19.7095   19.0328
+50    21.3062   20.8956   20.3516   21.3062
+51    20.662    20.1441   21.1034   20.3801
+52    19.9321   20.2444   20.6675   21.0958
+53    19.1886   20.1962   19.7846   20.2872
+54    19.7776   20.033    18.8268   18.8874
+55    18.6939   19.7037   18.734    19.4496
+56    18.6938   19.2091   18.6938   18.6938
+57    20.1049   19.1932   19.7013   19.1145
+58    19.5739   19.0998   19.1646   19.6266
+59    21.1347   20.4625   19.7565   20.7067
+60    20.4532   20.8478   20.0871   21.1717
+61    20.3717   20.12     21.1433   20.6131
+62    19.753    20.367    20.1109   19.1179
+63    21.3062   21.1979   20.2927   21.3062
+64    19.1029   19.9197   19.4431   18.9245
+65    18.6938   19.656    18.6938   18.6938
+66    20.1191   19.5862   19.4894   20.3262
+67    19.5035   18.6938   18.6938   18.6938
+68    20.3252   19.4755   19.7531   20.3415
+69    20.0832   20.6505   21.146    21.2759
+70    18.6938   18.8144   19.3636   18.6938
+71    20.1085   19.3089   20.033    18.7558
+72    18.6938   18.6938   18.6938   19.6513
+73    21.3062   20.2765   20.7791   21.3062
+74    18.6938   19.0665   19.5092   18.6938
+75    19.3215   19.7013   20.3392   20.3252
+76    21.3062   21.3062   21.3062   20.3982
+77    20.6406   20.3369   20.1229   19.7013
+78    21.3062   21.3062   20.364    21.1308
+79    20.662    20.3801   21.1034   21.3062
+80    19.4452   19.59     20.1371   19.0244
+81    21.3062   20.3446   21.3062   21.3062
+82    20.0946   19.8736   19.198    19.6494
+83    19.7013   19.1959   19.0958   18.6938
+84    20.3801   20.2475   20.662    19.7341
+85    19.9368   19.6606   19.9709   20.2435
+86    19.233    18.6938   18.6938   19.6859
+87    20.6406   21.3062   20.3516   20.4639
+88    21.1598   20.1853   21.2508   21.1826
+89    20.2028   19.796    19.7846   20.7898
+90    21.3062   20.3596   21.3062   21.3019
+91    19.6702   19.1601   18.7527   19.096
+92    20.2583   20.1688   19.9785   21.3062
+93    19.1372   19.1449   19.7846   19.796
+94    20.5725   19.7846   20.7534   20.4485
+95    18.6938   19.5568   18.6938   18.7007
+96    20.7534   20.5725   21.3054   20.4485
+97    20.8946   19.745    20.3295   21.1192
+98    20.1894   19.9559   20.2462   19.6123
+99    20.5052   19.6155   20.0565   19.5254
+100   19.288    18.6943   18.8268   20.0032
+101   18.9056   18.6938   19.7776   18.6938
+102   21.3062   21.1717   20.8531   20.1971
+103   20.0894   20.1855   20.353    19.6459
+104   21.3062   20.2678   21.3062   20.3971
+105   18.8897   19.3963   19.5964   18.6938
+106   21.3062   21.3062   20.3263   21.3062
+107   20.266    21.3062   21.3062   21.3062
+108   20.3161   21.1203   21.0335   20.2375
+109   19.3607   19.645    19.2208   19.828
+110   20.1845   21.0273   19.9373   20.5906
+111   18.6938   18.6938   18.6938   19.6233
+112   19.5895   19.6323   19.4857   20.1163
+113   20.1853   19.6637   20.1854   19.0844
+114   19.7019   18.6938   18.6938   18.6938
+115   19.7341   20.2473   20.662    19.4958
+116   19.6844   20.1903   19.7776   20.5905
+117   19.5964   18.6938   18.6938   19.3963
+118   21.0273   19.9784   19.9373   20.1597
+119   21.3062   21.3062   21.3062   20.4214
+120   20.1971   20.1535   21.3062   21.3062
+121   18.6938   19.5577   19.3236   19.0665
+122   21.3062   20.337    21.3062   20.5906
+123   20.3971   21.3062   21.3062   21.3062
+124   21.3062   21.3062   20.7373   21.3062
+125   18.8831   18.6938   19.6679   18.6938
+;
+
+side = 2.61237
+softness = 0.9
+
+---------------------------- Solution coords data ----------------------------
+distances [*,1,*]
+:     1   2   3   4    :=
+1     0   1   0   1
+2     0   1   0   1
+3     0   1   0   1
+4     0   1   0   1
+5     0   1   0   1
+6     0   1   0   1
+7     0   1   0   1
+8     0   1   0   1
+9     0   1   0   1
+10    0   1   0   1
+11    0   1   0   1
+12    0   1   0   1
+13    0   1   0   1
+14    0   1   0   1
+15    0   1   0   1
+16    0   1   0   1
+17    0   1   0   1
+18    0   1   0   1
+19    0   1   0   1
+20    0   1   0   1
+21    0   1   0   1
+22    0   1   0   1
+23    0   1   0   1
+24    0   1   0   1
+25    0   1   0   1
+26    0   1   0   1
+27    0   1   0   1
+28    0   1   0   1
+29    0   1   0   1
+30    0   1   0   1
+31    0   1   0   1
+32    0   1   0   1
+33    0   1   0   1
+34    0   1   0   1
+35    0   1   0   1
+36    0   1   0   1
+37    0   1   0   1
+38    0   1   0   1
+39    0   1   0   1
+40    0   1   0   1
+41    0   1   0   1
+42    0   1   0   1
+43    0   1   0   1
+44    0   1   0   1
+45    0   1   0   1
+46    0   1   0   1
+47    0   1   0   1
+48    0   1   0   1
+49    0   1   0   1
+50    0   1   0   1
+51    0   1   0   1
+52    0   1   0   1
+53    0   1   0   1
+54    0   1   0   1
+55    0   1   0   1
+56    0   1   0   1
+57    0   1   0   1
+58    0   1   0   1
+59    0   1   0   1
+60    0   1   0   1
+61    0   1   0   1
+62    0   1   0   1
+63    0   1   0   1
+64    0   1   0   1
+65    0   1   0   1
+66    0   1   0   1
+67    0   1   0   1
+68    0   1   0   1
+69    0   1   0   1
+70    0   1   0   1
+71    0   1   0   1
+72    0   1   0   1
+73    0   1   0   1
+74    0   1   0   1
+75    0   1   0   1
+76    0   1   0   1
+77    0   1   0   1
+78    0   1   0   1
+79    0   1   0   1
+80    0   1   0   1
+81    0   1   0   1
+82    0   1   0   1
+83    0   1   0   1
+84    0   1   0   1
+85    0   1   0   1
+86    0   1   0   1
+87    0   1   0   1
+88    0   1   0   1
+89    0   1   0   1
+90    0   1   0   1
+91    0   1   0   1
+92    0   1   0   1
+93    0   1   0   1
+94    0   1   0   1
+95    0   1   0   1
+96    0   1   0   1
+97    0   1   0   1
+98    0   1   0   1
+99    0   1   0   1
+100   0   1   0   1
+101   0   1   0   1
+102   0   1   0   1
+103   0   1   0   1
+104   0   1   0   1
+105   0   1   0   1
+106   0   1   0   1
+107   0   1   0   1
+108   0   1   0   1
+109   0   1   0   1
+110   0   1   0   1
+111   0   1   0   1
+112   0   1   0   1
+113   0   1   0   1
+114   0   1   0   1
+115   0   1   0   1
+116   0   1   0   1
+117   0   1   0   1
+118   0   1   0   1
+119   0   1   0   1
+120   0   1   0   1
+121   0   1   0   1
+122   0   1   0   1
+123   0   1   0   1
+124   0   1   0   1
+125   0   1   0   1
+
+ [*,2,*]
+:     1   2   3   4    :=
+1     0   0   1   1
+2     0   0   1   1
+3     0   0   1   1
+4     0   0   1   1
+5     0   0   1   1
+6     0   0   1   1
+7     0   0   1   1
+8     0   0   1   1
+9     0   0   1   1
+10    0   0   1   1
+11    0   0   1   1
+12    0   0   1   1
+13    0   0   1   1
+14    0   0   1   1
+15    0   0   1   1
+16    0   0   1   1
+17    0   0   1   1
+18    0   0   1   1
+19    0   0   1   1
+20    0   0   1   1
+21    0   0   1   1
+22    0   0   1   1
+23    0   0   1   1
+24    0   0   1   1
+25    0   0   1   1
+26    0   0   1   1
+27    0   0   1   1
+28    0   0   1   1
+29    0   0   1   1
+30    0   0   1   1
+31    0   0   1   1
+32    0   0   1   1
+33    0   0   1   1
+34    0   0   1   1
+35    0   0   1   1
+36    0   0   1   1
+37    0   0   1   1
+38    0   0   1   1
+39    0   0   1   1
+40    0   0   1   1
+41    0   0   1   1
+42    0   0   1   1
+43    0   0   1   1
+44    0   0   1   1
+45    0   0   1   1
+46    0   0   1   1
+47    0   0   1   1
+48    0   0   1   1
+49    0   0   1   1
+50    0   0   1   1
+51    0   0   1   1
+52    0   0   1   1
+53    0   0   1   1
+54    0   0   1   1
+55    0   0   1   1
+56    0   0   1   1
+57    0   0   1   1
+58    0   0   1   1
+59    0   0   1   1
+60    0   0   1   1
+61    0   0   1   1
+62    0   0   1   1
+63    0   0   1   1
+64    0   0   1   1
+65    0   0   1   1
+66    0   0   1   1
+67    0   0   1   1
+68    0   0   1   1
+69    0   0   1   1
+70    0   0   1   1
+71    0   0   1   1
+72    0   0   1   1
+73    0   0   1   1
+74    0   0   1   1
+75    0   0   1   1
+76    0   0   1   1
+77    0   0   1   1
+78    0   0   1   1
+79    0   0   1   1
+80    0   0   1   1
+81    0   0   1   1
+82    0   0   1   1
+83    0   0   1   1
+84    0   0   1   1
+85    0   0   1   1
+86    0   0   1   1
+87    0   0   1   1
+88    0   0   1   1
+89    0   0   1   1
+90    0   0   1   1
+91    0   0   1   1
+92    0   0   1   1
+93    0   0   1   1
+94    0   0   1   1
+95    0   0   1   1
+96    0   0   1   1
+97    0   0   1   1
+98    0   0   1   1
+99    0   0   1   1
+100   0   0   1   1
+101   0   0   1   1
+102   0   0   1   1
+103   0   0   1   1
+104   0   0   1   1
+105   0   0   1   1
+106   0   0   1   1
+107   0   0   1   1
+108   0   0   1   1
+109   0   0   1   1
+110   0   0   1   1
+111   0   0   1   1
+112   0   0   1   1
+113   0   0   1   1
+114   0   0   1   1
+115   0   0   1   1
+116   0   0   1   1
+117   0   0   1   1
+118   0   0   1   1
+119   0   0   1   1
+120   0   0   1   1
+121   0   0   1   1
+122   0   0   1   1
+123   0   0   1   1
+124   0   0   1   1
+125   0   0   1   1
+
+ [*,3,*]
+:     1   2   3   4    :=
+1     1   0   0   1
+2     1   0   0   1
+3     1   0   0   1
+4     1   0   0   1
+5     1   0   0   1
+6     1   0   0   1
+7     1   0   0   1
+8     1   0   0   1
+9     1   0   0   1
+10    1   0   0   1
+11    1   0   0   1
+12    1   0   0   1
+13    1   0   0   1
+14    1   0   0   1
+15    1   0   0   1
+16    1   0   0   1
+17    1   0   0   1
+18    1   0   0   1
+19    1   0   0   1
+20    1   0   0   1
+21    1   0   0   1
+22    1   0   0   1
+23    1   0   0   1
+24    1   0   0   1
+25    1   0   0   1
+26    1   0   0   1
+27    1   0   0   1
+28    1   0   0   1
+29    1   0   0   1
+30    1   0   0   1
+31    1   0   0   1
+32    1   0   0   1
+33    1   0   0   1
+34    1   0   0   1
+35    1   0   0   1
+36    1   0   0   1
+37    1   0   0   1
+38    1   0   0   1
+39    1   0   0   1
+40    1   0   0   1
+41    1   0   0   1
+42    1   0   0   1
+43    1   0   0   1
+44    1   0   0   1
+45    1   0   0   1
+46    1   0   0   1
+47    1   0   0   1
+48    1   0   0   1
+49    1   0   0   1
+50    1   0   0   1
+51    1   0   0   1
+52    1   0   0   1
+53    1   0   0   1
+54    1   0   0   1
+55    1   0   0   1
+56    1   0   0   1
+57    1   0   0   1
+58    1   0   0   1
+59    1   0   0   1
+60    1   0   0   1
+61    1   0   0   1
+62    1   0   0   1
+63    1   0   0   1
+64    1   0   0   1
+65    1   0   0   1
+66    1   0   0   1
+67    1   0   0   1
+68    1   0   0   1
+69    1   0   0   1
+70    1   0   0   1
+71    1   0   0   1
+72    1   0   0   1
+73    1   0   0   1
+74    1   0   0   1
+75    1   0   0   1
+76    1   0   0   1
+77    1   0   0   1
+78    1   0   0   1
+79    1   0   0   1
+80    1   0   0   1
+81    1   0   0   1
+82    1   0   0   1
+83    1   0   0   1
+84    1   0   0   1
+85    1   0   0   1
+86    1   0   0   1
+87    1   0   0   1
+88    1   0   0   1
+89    1   0   0   1
+90    1   0   0   1
+91    1   0   0   1
+92    1   0   0   1
+93    1   0   0   1
+94    1   0   0   1
+95    1   0   0   1
+96    1   0   0   1
+97    1   0   0   1
+98    1   0   0   1
+99    1   0   0   1
+100   1   0   0   1
+101   1   0   0   1
+102   1   0   0   1
+103   1   0   0   1
+104   1   0   0   1
+105   1   0   0   1
+106   1   0   0   1
+107   1   0   0   1
+108   1   0   0   1
+109   1   0   0   1
+110   1   0   0   1
+111   1   0   0   1
+112   1   0   0   1
+113   1   0   0   1
+114   1   0   0   1
+115   1   0   0   1
+116   1   0   0   1
+117   1   0   0   1
+118   1   0   0   1
+119   1   0   0   1
+120   1   0   0   1
+121   1   0   0   1
+122   1   0   0   1
+123   1   0   0   1
+124   1   0   0   1
+125   1   0   0   1
+
+ [*,4,*]
+:     1   2   3   4    :=
+1     1   1   1   0
+2     1   1   1   0
+3     1   1   1   0
+4     1   1   1   0
+5     1   1   1   0
+6     1   1   1   0
+7     1   1   1   0
+8     1   1   1   0
+9     1   1   1   0
+10    1   1   1   0
+11    1   1   1   0
+12    1   1   1   0
+13    1   1   1   0
+14    1   1   1   0
+15    1   1   1   0
+16    1   1   1   0
+17    1   1   1   0
+18    1   1   1   0
+19    1   1   1   0
+20    1   1   1   0
+21    1   1   1   0
+22    1   1   1   0
+23    1   1   1   0
+24    1   1   1   0
+25    1   1   1   0
+26    1   1   1   0
+27    1   1   1   0
+28    1   1   1   0
+29    1   1   1   0
+30    1   1   1   0
+31    1   1   1   0
+32    1   1   1   0
+33    1   1   1   0
+34    1   1   1   0
+35    1   1   1   0
+36    1   1   1   0
+37    1   1   1   0
+38    1   1   1   0
+39    1   1   1   0
+40    1   1   1   0
+41    1   1   1   0
+42    1   1   1   0
+43    1   1   1   0
+44    1   1   1   0
+45    1   1   1   0
+46    1   1   1   0
+47    1   1   1   0
+48    1   1   1   0
+49    1   1   1   0
+50    1   1   1   0
+51    1   1   1   0
+52    1   1   1   0
+53    1   1   1   0
+54    1   1   1   0
+55    1   1   1   0
+56    1   1   1   0
+57    1   1   1   0
+58    1   1   1   0
+59    1   1   1   0
+60    1   1   1   0
+61    1   1   1   0
+62    1   1   1   0
+63    1   1   1   0
+64    1   1   1   0
+65    1   1   1   0
+66    1   1   1   0
+67    1   1   1   0
+68    1   1   1   0
+69    1   1   1   0
+70    1   1   1   0
+71    1   1   1   0
+72    1   1   1   0
+73    1   1   1   0
+74    1   1   1   0
+75    1   1   1   0
+76    1   1   1   0
+77    1   1   1   0
+78    1   1   1   0
+79    1   1   1   0
+80    1   1   1   0
+81    1   1   1   0
+82    1   1   1   0
+83    1   1   1   0
+84    1   1   1   0
+85    1   1   1   0
+86    1   1   1   0
+87    1   1   1   0
+88    1   1   1   0
+89    1   1   1   0
+90    1   1   1   0
+91    1   1   1   0
+92    1   1   1   0
+93    1   1   1   0
+94    1   1   1   0
+95    1   1   1   0
+96    1   1   1   0
+97    1   1   1   0
+98    1   1   1   0
+99    1   1   1   0
+100   1   1   1   0
+101   1   1   1   0
+102   1   1   1   0
+103   1   1   1   0
+104   1   1   1   0
+105   1   1   1   0
+106   1   1   1   0
+107   1   1   1   0
+108   1   1   1   0
+109   1   1   1   0
+110   1   1   1   0
+111   1   1   1   0
+112   1   1   1   0
+113   1   1   1   0
+114   1   1   1   0
+115   1   1   1   0
+116   1   1   1   0
+117   1   1   1   0
+118   1   1   1   0
+119   1   1   1   0
+120   1   1   1   0
+121   1   1   1   0
+122   1   1   1   0
+123   1   1   1   0
+124   1   1   1   0
+125   1   1   1   0
+;
+
+---------------------------- Solution stats data ----------------------------
+_ampl_time = 0.624659
+_total_solve_time = 10740.9
+_ampl_elapsed_time = 0.620017
+_ampl_user_time = 0.533313
+
+Total time elapsed: $10740.87.
+---------------------------- Solution miscs data ----------------------------
+tetrahedron_volume [*] :=
+  1 0.117851    26 0.117851    51 0.117851    76 0.117851   101 0.117851
+  2 0.117851    27 0.117851    52 0.117851    77 0.117851   102 0.117851
+  3 0.117851    28 0.117851    53 0.117851    78 0.117851   103 0.117851
+  4 0.117851    29 0.117851    54 0.117851    79 0.117851   104 0.117851
+  5 0.117851    30 0.117851    55 0.117851    80 0.117851   105 0.117851
+  6 0.117851    31 0.117851    56 0.117851    81 0.117851   106 0.117851
+  7 0.117851    32 0.117851    57 0.117851    82 0.117851   107 0.117851
+  8 0.117851    33 0.117851    58 0.117851    83 0.117851   108 0.117851
+  9 0.117851    34 0.117851    59 0.117851    84 0.117851   109 0.117851
+ 10 0.117851    35 0.117851    60 0.117851    85 0.117851   110 0.117851
+ 11 0.117851    36 0.117851    61 0.117851    86 0.117851   111 0.117851
+ 12 0.117851    37 0.117851    62 0.117851    87 0.117851   112 0.117851
+ 13 0.117851    38 0.117851    63 0.117851    88 0.117851   113 0.117851
+ 14 0.117851    39 0.117851    64 0.117851    89 0.117851   114 0.117851
+ 15 0.117851    40 0.117851    65 0.117851    90 0.117851   115 0.117851
+ 16 0.117851    41 0.117851    66 0.117851    91 0.117851   116 0.117851
+ 17 0.117851    42 0.117851    67 0.117851    92 0.117851   117 0.117851
+ 18 0.117851    43 0.117851    68 0.117851    93 0.117851   118 0.117851
+ 19 0.117851    44 0.117851    69 0.117851    94 0.117851   119 0.117851
+ 20 0.117851    45 0.117851    70 0.117851    95 0.117851   120 0.117851
+ 21 0.117851    46 0.117851    71 0.117851    96 0.117851   121 0.117851
+ 22 0.117851    47 0.117851    72 0.117851    97 0.117851   122 0.117851
+ 23 0.117851    48 0.117851    73 0.117851    98 0.117851   123 0.117851
+ 24 0.117851    49 0.117851    74 0.117851    99 0.117851   124 0.117851
+ 25 0.117851    50 0.117851    75 0.117851   100 0.117851   125 0.117851
+;
+
+---------------------------- Solution miscs data ----------------------------
+tetrahedron_surface_area [*] :=
+  1 0    14 0    27 0    40 0    53 0    66 0    79 0    92 0   105 0   118 0
+  2 0    15 0    28 0    41 0    54 0    67 0    80 0    93 0   106 0   119 0
+  3 0    16 0    29 0    42 0    55 0    68 0    81 0    94 0   107 0   120 0
+  4 0    17 0    30 0    43 0    56 0    69 0    82 0    95 0   108 0   121 0
+  5 0    18 0    31 0    44 0    57 0    70 0    83 0    96 0   109 0   122 0
+  6 0    19 0    32 0    45 0    58 0    71 0    84 0    97 0   110 0   123 0
+  7 0    20 0    33 0    46 0    59 0    72 0    85 0    98 0   111 0   124 0
+  8 0    21 0    34 0    47 0    60 0    73 0    86 0    99 0   112 0   125 0
+  9 0    22 0    35 0    48 0    61 0    74 0    87 0   100 0   113 0
+ 10 0    23 0    36 0    49 0    62 0    75 0    88 0   101 0   114 0
+ 11 0    24 0    37 0    50 0    63 0    76 0    89 0   102 0   115 0
+ 12 0    25 0    38 0    51 0    64 0    77 0    90 0   103 0   116 0
+ 13 0    26 0    39 0    52 0    65 0    78 0    91 0   104 0   117 0
+;
+

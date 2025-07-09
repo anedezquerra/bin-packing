@@ -1,0 +1,36 @@
+# Set BARON as the solver
+option solver baron;
+
+# Configure BARON options for complex instance solving
+option baron_options 'maxtime=-1 keepsol threads=2 deltat=1200 deltaa=1e-6 deltar=1e-6 deltaterm=1 epsr=1e-6 epsa=1e-6 nlpsol=8 lsolver=knitro';
+
+
+
+# Solve the model
+printf "---------------------------- Solution header data ----------------------------\n";
+solve;
+
+printf "---------------------------- Container and geometric considerations ----------------------------\n";
+printf "Container type: %s\n", container_type;
+printf "Structural conservation type: %s\n", geometric_conservation;
+
+printf "---------------------------- Solution execution data ----------------------------\n";
+display solve_result_num, solve_result;
+
+printf "---------------------------- Solution data ----------------------------\n";
+display card(figures), coords, side, softness;
+
+printf "---------------------------- Solution coords data ----------------------------\n";
+display distances;
+
+printf "---------------------------- Solution stats data ----------------------------\n";
+display _ampl_time, _total_solve_time, _ampl_elapsed_time, _ampl_user_time;
+printf "Total time elapsed: $%6.2f.\n", _total_solve_time;
+
+printf "---------------------------- Solution miscs data ----------------------------\n";
+display tetrahedron_volume;
+
+printf "---------------------------- Solution miscs data ----------------------------\n";
+display tetrahedron_surface_area;
+
+quit;
