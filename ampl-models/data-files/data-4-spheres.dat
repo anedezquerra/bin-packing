@@ -6,7 +6,7 @@ param n_dimensions := 3;
 
 param volume := 0.11785113020;
 param total_area := 1.7320508076;
-param softness := 0.85;
+param softness := 0.99;
 
 
 param container_type := 'sphere';

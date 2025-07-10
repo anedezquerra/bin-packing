@@ -1,0 +1,104 @@
+Error at _cmdno 5 executing "solve" command
+(file amplin, line 2333, offset 52980):
+error processing param distances:
+	3440 invalid subscripts discarded:
+	distances[86,1,1]
+	distances[86,1,2]
+	distances[86,1,3]
+	and 3437 more.
+Error at _cmdno 5 executing "solve" command
+(file amplin, li
+Presolve eliminates 170 constraints and 18445 variables.
+Adjusted problem:
+18871 variables:
+	11730 nonlinear variables
+	7141 linear variables
+38930 co##### This license is only intended for use by NEOS. #####
+##### License is valid until Jan 16, 2026 #####
+
+	35190 inequality constraints
+1 linear objective; 1 nonzero.
+
+Artelys Knitro 14.2.0: threads=4
+algorithm=1
+ms_enable=1
+ms_maxsolves=10
+feastol=1e-5
+opttol=1e-5
+honorbnds=1
+bar_initpt=3
+bar_murule=4
+scale=1
+outlev=2
+maxtime_real=1200
+WARNING:  Option 'threads' is deprecated, please use 'numthreads'.
+
+=======================================
+           Academic License
+       (NOT FOR COMMERCIAL USE)
+         Artelys Knitro 14.2.0
+=======================================
+
+Knitro presolve eliminated 0 variables and 0 constraints.
+
+algorithm                1
+bar_initpt               3
+bar_murule               4
+concurrent_evals         0
+datacheck                0
+feastol                  1e-05
+findiff_numthreads       1
+hessian_no_f             1
+hessopt                  1
+honorbnds                1
+maxtime_real             1200
+ms_enable                1
+ms_maxsolves             10
+numthreads               4
+opttol                   1e-05
+
+Problem Characteristics                                 (   Presolved)
+-----------------------
+Objective goal:  Minimize
+Objective type:  linear
+Number of variables:                              18871 (       18871)
+    bounded below only:                            1021 (        1021)
+    bounded above only:                               0 (           0)
+    bounded below and above:                          0 (           0)
+    fixed:                                            0 (           0)
+    free:                                         17850 (       17850)
+Number of constraints:                            38930 (       38930)
+    linear equalities:                                0 (           0)
+    quadratic equalities:                          3570 (        3570)
+    gen. nonlinear equalities:                      170 (         170)
+    linear one-sided inequalities:                 5610 (        5610)
+    quadratic one-sided inequalities:             29580 (       29580)
+    gen. nonlinear one-sided inequalities:            0 (           0)
+    linear two-sided inequalities:                    0 (           0)
+    quadratic two-sided inequalities:                 0 (           0)
+    gen. nonlinear two-sided inequalities:            0 (           0)
+Number of nonzeros in Jacobian:                  230010 (      230010)
+Number of nonzeros in Hessian:                   103020 (      103020)
+
+Knitro parallel multistart will run with 4 threads.
+
+Return codes description
+------------------------
+  0:  The final solution satisfies the termination conditions for verifying optimality.
+  -100 to -199:  A feasible approximate solution was found.
+  -200 to -299:  Knitro terminated at an infeasible point.
+  -300 to -301:  The problem was determined to be unbounded.
+  -400 to -499:  Knitro terminated because it reached a pre-defined limit.
+    -400 to -409:  A feasible point was found.
+    -410 to -419:  No feasible point was found.
+  -500 to -599:  Knitro terminated with an input error or some non-standard error.
+A more detailed description of individual return codes and their corresponding
+termination messages is provided at
+https://www.artelys.com/app/docs/knitro/3_referenceManual/returnCodes.html
+
+ Solve #  ThreadID  Status     Objective      FeasError    OptError    Real Time 
+--------  --------  ------  --------------   ----------   ----------  ----------
+
+ERROR: Your job was terminated because it exceeded the maximum allotted time for a job.
+
+Please refer to the NEOS Server FAQ (https://neos-guide.org/content/FAQ) for more information regarding job termination conditions and potential solutions.
