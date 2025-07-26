@@ -23,14 +23,14 @@ def load_data(xlsx_path: str) -> pd.DataFrame:
 def plot_heatmaps_by_combination(df: pd.DataFrame, output_folder: str):
     """Genera un heatmap para cada combinación de contenedor y conservación."""
     df = df.copy()
-    unique_combinations = df[["container_type", "structural_conservation_type"]].drop_duplicates()
+    unique_combinations = df[["container", "conservation"]].drop_duplicates()
 
     for _, row in unique_combinations.iterrows():
-        cont_type = row["container_type"]
-        cons_type = row["structural_conservation_type"]
+        cont_type = row["container"]
+        cons_type = row["conservation"]
 
-        subset = df[(df["container_type"] == cont_type) &
-                    (df["structural_conservation_type"] == cons_type)]
+        subset = df[(df["container"] == cont_type) &
+                    (df["conservation"] == cons_type)]
 
         if subset.empty:
             print(f"⏭️ Combinación vacía: {cont_type} + {cons_type}")
@@ -39,7 +39,7 @@ def plot_heatmaps_by_combination(df: pd.DataFrame, output_folder: str):
         pivot = subset.pivot_table(
             values="total_solve_time",
             index="softness",
-            columns="card_figures",
+            columns="items",
             aggfunc="mean"
         )
 
@@ -64,10 +64,8 @@ def plot_heatmaps_by_combination(df: pd.DataFrame, output_folder: str):
 def plot_softness_vs_packing(df: pd.DataFrame, output_folder: str):
     """Gráfico: Suavidad vs. Densidad aparente de empaquetado."""
     df = df.copy()
-    df["packing_ratio"] = df["tetrahedron_volume_sum"] / df["side"]**3  # Solo si el contenedor es cubo
-    df = df[df["container_type"] == "cube"]
 
-    sns.lineplot(data=df, x="softness", y="packing_ratio", hue="card_figures", marker="o")
+    sns.lineplot(data=df, x="softness", y="packing_ratio", hue="items", marker="o")
     plt.title("Relación entre suavidad y tasa de empaquetado (contenedor cúbico)")
     plt.xlabel("Suavidad")
     plt.ylabel("Tasa de empaquetado")
@@ -80,7 +78,7 @@ def plot_softness_vs_packing(df: pd.DataFrame, output_folder: str):
 
 def plot_solve_time_by_container(df: pd.DataFrame, output_folder: str):
     """Boxplot: Tiempo total de resolución por tipo de contenedor."""
-    sns.boxplot(data=df, x="container_type", y="total_solve_time", hue="structural_conservation_type")
+    sns.boxplot(data=df, x="container", y="total_solve_time", hue="conservation")
     plt.yscale("log")
     plt.title("Distribución del tiempo de resolución por contenedor")
     plt.xlabel("Contenedor")
@@ -92,7 +90,7 @@ def plot_solve_time_by_container(df: pd.DataFrame, output_folder: str):
 
 def plot_heatmap_softness_vs_figures(df: pd.DataFrame, output_folder: str):
     """Heatmap: Tiempo medio de resolución según suavidad y número de tetraedros."""
-    pivot = df.pivot_table(values="total_solve_time", index="softness", columns="card_figures", aggfunc="mean")
+    pivot = df.pivot_table(values="total_solve_time", index="softness", columns="items", aggfunc="mean")
     sns.heatmap(pivot, cmap="YlGnBu", annot=True, fmt=".1f")
     plt.title("Tiempo de resolución promedio (s) según suavidad y número de piezas")
     plt.xlabel("Número de tetraedros")
@@ -108,7 +106,7 @@ def plot_heatmap_softness_vs_figures(df: pd.DataFrame, output_folder: str):
 #         print("⚠️ La columna 'volume_error' no está presente.")
 #         return
 
-#     sns.lineplot(data=df, x="softness", y="volume_error", hue="card_figures", marker="o")
+#     sns.lineplot(data=df, x="softness", y="volume_error", hue="items", marker="o")
 #     plt.title("Error de conservación de volumen vs. Suavidad")
 #     plt.xlabel("Suavidad")
 #     plt.ylabel("Error relativo")
@@ -119,12 +117,12 @@ def plot_heatmap_softness_vs_figures(df: pd.DataFrame, output_folder: str):
 
 def main():
     # Ruta local
-    xlsx_path = "artifacts/results.xlsx"
-    output_folder = "figures"
+    xlsx_path = "artifacts/export-20250714.xlsx"
+    output_folder = "artifacts/figures"
 
     df = load_data(xlsx_path)
     
-    df = df[df['solve_result_num'] == 0].copy()
+    df = df[df['result'] == 'solved'].copy()
 
     plot_softness_vs_packing(df, output_folder)
     plot_solve_time_by_container(df, output_folder)

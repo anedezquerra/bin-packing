@@ -1,14 +1,5 @@
 option solver baron;
-option baron_options "\
-maxtime=1200 \
-absreq=1e-6 \
-relreq=1e-6 \
-numloc=10 \
-prfreq=10000 \
-outlev=2 \
-keep=1 \
-brvarstrategy=4 \
-nodecuts=3";
+option baron_options 'epsa = 0.5 epsr = 0.8  prfreq = 50 filter maxtime = 120 maxiter = -1 Barstats keepsol wantsol= 4 threads= 4 nlpsol= 1';
 
 printf "---------------------------- NEOS Job Metadata ----------------------------\n";
 printf "NEOS Job ID: $neos_job\n";

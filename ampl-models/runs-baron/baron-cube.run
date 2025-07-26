@@ -2,7 +2,7 @@
 option solver baron;
 
 # Configure BARON options for complex instance solving
-option baron_options 'maxtime=-1 keepsol threads=2 deltat=1200 deltaa=1e-6 deltar=1e-6 deltaterm=1 epsr=1e-6 epsa=1e-6 nlpsol=8 lsolver=knitro';
+option baron_options 'maxtime=-1 maxiter=-1 keepsol threads=2 deltat=1200 deltaa=1e-6 deltar=1e-6 deltaterm=1 epsr=1e-6 epsa=1e-6 nlpsol=8 lsolver=knitro';
 
 
 

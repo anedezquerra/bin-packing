@@ -1,0 +1,252 @@
+Error at _cmdno 5 executing "solve" command
+(file amplin, line 2001, offset 39163):
+error processing param distances:
+	4720 invalid subscripts discarded:
+	distances[6,1,1]
+	distances[6,1,2]
+	distances[6,1,3]
+	and 4717 more.
+##### This license is only intended for use by NEOS. #####
+##### License is valid until Jan 16, 2026 #####
+ariables.
+Substitution eliminates 1 variable.
+Adjusted problem:
+113 variables:
+	93 nonlinear variables
+	20 linear variables
+233 constraints; 1236 nonzeros
+	180 nonlinear constraints
+	53 linear constraints
+	21 equality constraints
+	212 inequality constraints
+1 nonlinear objective; 3 nonzeros.
+
+Artelys Knitro 14.2.0: threads=4
+algorithm=1
+ms_enable=1
+ms_maxsolves=10
+feastol=1e-5
+opttol=1e-5
+honorbnds=1
+bar_initpt=3
+bar_murule=4
+scale=1
+outlev=2
+maxtime_real=1200
+WARNING:  Option 'threads' is deprecated, please use 'numthreads'.
+WARNING: 1 constraint is constant or undefined and will be ignored.
+
+=======================================
+           Academic License
+       (NOT FOR COMMERCIAL USE)
+         Artelys Knitro 14.2.0
+=======================================
+
+No start point provided -- Knitro computing one.
+
+Knitro presolve eliminated 0 variables and 1 constraint.
+
+algorithm                1
+bar_initpt               3
+bar_murule               4
+concurrent_evals         0
+datacheck                0
+feastol                  1e-05
+findiff_numthreads       1
+hessian_no_f             1
+hessopt                  1
+honorbnds                1
+maxtime_real             1200
+ms_enable                1
+ms_maxsolves             10
+numthreads               4
+opttol                   1e-05
+
+Problem Characteristics                                 (   Presolved)
+-----------------------
+Objective goal:  Minimize
+Objective type:  general
+Number of variables:                                113 (         113)
+    bounded below only:                               1 (           1)
+    bounded above only:                               0 (           0)
+    bounded below and above:                          0 (           0)
+    fixed:                                            0 (           0)
+    free:                                           112 (         112)
+Number of constraints:                              233 (         232)
+    linear equalities:                                1 (           0)
+    quadratic equalities:                            10 (          10)
+    gen. nonlinear equalities:                       10 (          10)
+    linear one-sided inequalities:                   52 (          52)
+    quadratic one-sided inequalities:               160 (         160)
+    gen. nonlinear one-sided inequalities:            0 (           0)
+    linear two-sided inequalities:                    0 (           0)
+    quadratic two-sided inequalities:                 0 (           0)
+    gen. nonlinear two-sided inequalities:            0 (           0)
+Number of nonzeros in Jacobian:                    1236 (        1236)
+Number of nonzeros in Hessian:                      663 (         663)
+
+Knitro parallel multistart will run with 4 threads.
+
+Return codes description
+------------------------
+  0:  The final solution satisfies the termination conditions for verifying optimality.
+  -100 to -199:  A feasible approximate solution was found.
+  -200 to -299:  Knitro terminated at an infeasible point.
+  -300 to -301:  The problem was determined to be unbounded.
+  -400 to -499:  Knitro terminated because it reached a pre-defined limit.
+    -400 to -409:  A feasible point was found.
+    -410 to -419:  No feasible point was found.
+  -500 to -599:  Knitro terminated with an input error or some non-standard error.
+A more detailed description of individual return codes and their corresponding
+termination messages is provided at
+https://www.artelys.com/app/docs/knitro/3_referenceManual/returnCodes.html
+
+ Solve #  ThreadID  Status     Objective      FeasError    OptError    Real Time 
+--------  --------  ------  --------------   ----------   ----------  ----------
+      3          3       0         1.23432  4.15564e-05  1.93972e-06     0.964428
+      1          1       0        0.660346  2.87584e-05  1.24826e-06      1.03827
+      0          0       0        0.642566  1.73382e-08  1.44804e-05      1.06202
+      5          1       0         1.01449  4.48272e-05  5.06289e-06      1.24261
+      2          2       0        0.641464  4.91766e-05  8.71006e-06      1.29368
+      6          0       0         1.03305  2.03363e-05  5.36971e-06      1.59316
+      7          2       0        0.739556  4.01602e-05  4.54663e-06      1.68729
+      4          3       0        0.765217  5.26599e-05  3.68581e-06      1.79132
+      8          1       0        0.642375  2.42741e-05  5.12298e-06      1.75294
+      9          0       0         1.30605  4.74036e-05  4.69324e-06      2.23330
+
+MULTISTART: Best locally optimal solution is returned.
+EXIT: Locally optimal solution found.
+
+Final Statistics
+----------------
+Final objective value               =   6.41464074077262e-01
+Final feasibility error (abs / rel) =   4.92e-05 / 8.88e-06
+Final optimality error  (abs / rel) =   8.71e-06 / 8.71e-06
+# of iterations                     =      14518 
+# of CG iterations                  =          0 
+# of function evaluations           =      20541
+# of gradient evaluations           =      14528
+# of Hessian evaluations            =      14562
+Total program time (secs)           =       4.89435 (    14.574 CPU time)
+
+===============================================================================
+
+Knitro 14.2.0: Locally optimal or satisfactory solution.
+objective 0.6414640741; feasibility error 4.92e-05
+14518 iterations; 20541 function evaluations
+
+suffix feaserror OUT;
+suffix opterror OUT;
+suffix numfcevals OUT;
+suffix numiters OUT;
+---------------------------- Solver Status Report ----------------------------
+solve_result_num = 0
+solve_result = solved
+solve_message = 'Knitro 14.2.0: Locally optimal or satisfactory solution.\
+objective 0.6414640741; feasibility error 4.92e-05\
+14518 iterations; 20541 function evaluations'
+
+
+---------------------------- Problem Dimensions ----------------------------
+Variables: 199
+Constraints: 244
+---------------------------- Container and geometric considerations  ----------------------------
+Container type: cylinder
+Structural conservation type: volume & surface
+---------------------------- Solution execution data ----------------------------
+solve_result_num = 0
+solve_result = solved
+
+---------------------------- Solution data ----------------------------
+card(figures) = 5
+
+coords [*,*,1]
+:       1           2           3            4         :=
+1   -0.279033   -0.341171    0.551999    -0.0814789
+2    0.440579    0.196748   -0.519561     0.094727
+3   -0.543597    0.416772   -0.250021     0.0219029
+4   -0.498068   -0.110747    0.450278    -0.298846
+5    0.479133   -0.27489    -0.0725454    0.552542
+
+ [*,*,2]
+:        1            2            3            4        :=
+1    0.3476       -0.454159   -0.134002     -0.562154
+2   -0.265749      0.532872   -0.00475899    0.560072
+3    0.00177427   -0.25928    -0.510061      0.445816
+4    0.273115     -0.435257    0.34386       0.475241
+5    0.239141      0.351803   -0.552651     -0.13174
+
+ [*,*,3]
+:      1         2         3         4       :=
+1   32.162    31.5679   31.8828   32.5275
+2   31.7761   32.3256   31.8819   31.3308
+3   31.8845   31.7787   31.0785   31.1883
+4   33.0666   32.4771   32.7578   32.1081
+5   32.8062   32.1569   32.5362   31.8811
+;
+
+radius = 0.568026
+height = 1.98809
+softness = 0.65
+
+---------------------------- Solution coords data ----------------------------
+distances [*,1,*]
+:   1   2   3   4    :=
+1   0   1   0   1
+2   0   1   0   1
+3   0   1   0   1
+4   0   1   0   1
+5   0   1   0   1
+
+ [*,2,*]
+:   1   2   3   4    :=
+1   0   0   1   1
+2   0   0   1   1
+3   0   0   1   1
+4   0   0   1   1
+5   0   0   1   1
+
+ [*,3,*]
+:   1   2   3   4    :=
+1   1   0   0   1
+2   1   0   0   1
+3   1   0   0   1
+4   1   0   0   1
+5   1   0   0   1
+
+ [*,4,*]
+:   1   2   3   4    :=
+1   1   1   1   0
+2   1   1   1   0
+3   1   1   1   0
+4   1   1   1   0
+5   1   1   1   0
+;
+
+---------------------------- Solution stats data ----------------------------
+_ampl_time = 0.007172
+_total_solve_time = 14.5919
+_ampl_elapsed_time = 0.004295
+_ampl_user_time = 0.00239
+
+Total time elapsed: $ 14.59.
+_total_solve_time = 14.5919
+
+---------------------------- Solution miscs data ----------------------------
+tetrahedron_volume [*] :=
+1  0.117851
+2  0.117851
+3  0.117851
+4  0.117851
+5  0.117851
+;
+
+---------------------------- Solution miscs data ----------------------------
+tetrahedron_surface_area [*] :=
+1  1.73205
+2  1.73205
+3  1.73205
+4  1.73205
+5  1.73205
+;
+

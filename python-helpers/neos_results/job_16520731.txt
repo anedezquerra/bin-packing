@@ -1,0 +1,285 @@
+Error at _cmdno 5 executing "solve" command
+(file amplin, line 2001, offset 39164):
+error processing param distances:
+	4640 invalid subscripts discarded:
+	distances[11,1,1]
+	distances[11,1,2]
+	distances[11,1,3]
+	and 4637 more.
+##### This license is only intended for use by NEOS. #####
+##### License is valid until Jan 16, 2026 #####
+iables.
+Substitution eliminates 1 variable.
+Adjusted problem:
+348 variables:
+	258 nonlinear variables
+	90 linear variables
+713 constraints; 3991 nonzeros
+	585 nonlinear constraints
+	128 linear constraints
+	66 equality constraints
+	647 inequality constraints
+1 nonlinear objective; 3 nonzeros.
+
+Artelys Knitro 14.2.0: threads=4
+algorithm=1
+ms_enable=1
+ms_maxsolves=10
+feastol=1e-5
+opttol=1e-5
+honorbnds=1
+bar_initpt=3
+bar_murule=4
+scale=1
+outlev=2
+maxtime_real=3600
+WARNING:  Option 'threads' is deprecated, please use 'numthreads'.
+WARNING: 1 constraint is constant or undefined and will be ignored.
+
+=======================================
+           Academic License
+       (NOT FOR COMMERCIAL USE)
+         Artelys Knitro 14.2.0
+=======================================
+
+No start point provided -- Knitro computing one.
+
+Knitro presolve eliminated 0 variables and 1 constraint.
+
+algorithm                1
+bar_initpt               3
+bar_murule               4
+concurrent_evals         0
+datacheck                0
+feastol                  1e-05
+findiff_numthreads       1
+hessian_no_f             1
+hessopt                  1
+honorbnds                1
+maxtime_real             3600
+ms_enable                1
+ms_maxsolves             10
+numthreads               4
+opttol                   1e-05
+
+Problem Characteristics                                 (   Presolved)
+-----------------------
+Objective goal:  Minimize
+Objective type:  general
+Number of variables:                                348 (         348)
+    bounded below only:                               1 (           1)
+    bounded above only:                               0 (           0)
+    bounded below and above:                          0 (           0)
+    fixed:                                            0 (           0)
+    free:                                           347 (         347)
+Number of constraints:                              713 (         712)
+    linear equalities:                                1 (           0)
+    quadratic equalities:                            45 (          45)
+    gen. nonlinear equalities:                       20 (          20)
+    linear one-sided inequalities:                  127 (         127)
+    quadratic one-sided inequalities:               520 (         520)
+    gen. nonlinear one-sided inequalities:            0 (           0)
+    linear two-sided inequalities:                    0 (           0)
+    quadratic two-sided inequalities:                 0 (           0)
+    gen. nonlinear two-sided inequalities:            0 (           0)
+Number of nonzeros in Jacobian:                    3991 (        3991)
+Number of nonzeros in Hessian:                     1998 (        1998)
+
+Knitro parallel multistart will run with 4 threads.
+
+Return codes description
+------------------------
+  0:  The final solution satisfies the termination conditions for verifying optimality.
+  -100 to -199:  A feasible approximate solution was found.
+  -200 to -299:  Knitro terminated at an infeasible point.
+  -300 to -301:  The problem was determined to be unbounded.
+  -400 to -499:  Knitro terminated because it reached a pre-defined limit.
+    -400 to -409:  A feasible point was found.
+    -410 to -419:  No feasible point was found.
+  -500 to -599:  Knitro terminated with an input error or some non-standard error.
+A more detailed description of individual return codes and their corresponding
+termination messages is provided at
+https://www.artelys.com/app/docs/knitro/3_referenceManual/returnCodes.html
+
+ Solve #  ThreadID  Status     Objective      FeasError    OptError    Real Time 
+--------  --------  ------  --------------   ----------   ----------  ----------
+      4          2       0         1.15564  3.12700e-05  9.02950e-06      9.95113
+      3          2       0         1.36637  4.48021e-05  1.90879e-06      11.9980
+      7          2       0         1.12461  6.07043e-06  1.46648e-06      12.1416
+      2          1       0         1.35788  1.72845e-05  5.38944e-06      14.5644
+      9          3       0         1.40092  1.46973e-05  6.76057e-07      15.3763
+      1          3       0         1.45001  3.77775e-05  3.99037e-06      15.3075
+      5          1       0         1.58106  3.73300e-05  2.19982e-06      14.9900
+      6          3       0         1.43664  2.91293e-05  1.50414e-07      15.8045
+      8          1       0         2.43871  3.63599e-05  1.06365e-06      25.6061
+      0          0    -400         1.09313  2.18558e-09     0.402543      39.6486
+
+MULTISTART: Best locally optimal solution is returned.
+EXIT: Locally optimal solution found.
+
+Final Statistics
+----------------
+Final objective value               =   1.09312697941767e+00
+Final feasibility error (abs / rel) =   2.19e-09 / 4.69e-10
+Final optimality error  (abs / rel) =   4.03e-01 / 1.40e-01
+# of iterations                     =      60874 
+# of CG iterations                  =          0 
+# of function evaluations           =     107065
+# of gradient evaluations           =      60883
+# of Hessian evaluations            =      60960
+Total program time (secs)           =      55.20058 (   174.837 CPU time)
+
+===============================================================================
+
+Knitro 14.2.0: Locally optimal or satisfactory solution.
+objective 1.093126979; feasibility error 2.19e-09
+60874 iterations; 107065 function evaluations
+
+suffix feaserror OUT;
+suffix opterror OUT;
+suffix numfcevals OUT;
+suffix numiters OUT;
+---------------------------- Container and geometric considerations  ----------------------------
+Container type: cylinder
+Structural conservation type: volume & surface
+---------------------------- Solution execution data ----------------------------
+solve_result_num = 0
+solve_result = solved
+
+---------------------------- Solution data ----------------------------
+card(figures) = 10
+
+coords [*,*,1]
+:        1            2            3            4         :=
+1    -0.0269931    0.200707    -0.614893     0.293841
+2     0.173246    -0.702043    -0.682327    -0.37735
+3     0.201983    -0.62012     -0.702004    -0.380922
+4    -0.156437     0.757088     0.0539457    0.45579
+5    -0.260338     0.25946     -0.672752     0.0665691
+6    -0.152353     0.757873     0.467141     0.65786
+7    -0.627048     0.0845741   -0.756654    -0.0872093
+8     0.0952079   -0.101408     0.337775    -0.622702
+9     0.286211    -0.242847     0.184382     0.751549
+10   -0.22499      0.20858      0.39006      0.757266
+
+ [*,*,2]
+:         1            2            3            4         :=
+1    -0.318541      0.290052    -0.286611    -0.699817
+2     0.0230563     0.288481    -0.307578    -0.653562
+3     0.0377027    -0.311457     0.288573     0.656494
+4     0.0797204    -0.0538858   -0.753376    -0.606869
+5    -0.712954     -0.71291     -0.351406     0.149516
+6     0.086111     -0.0413933   -0.598218     0.375481
+7     0.427663     -0.168963    -0.0126055    0.723507
+8    -0.147787      0.752174     0.679666     0.423192
+9    -0.170228      0.184756    -0.717445     0.106109
+10    0.00247907    0.729781     0.651106    -0.0306294
+
+ [*,*,3]
+:        1            2            3           4         :=
+1    -0.258916    -1.01907     -1.06726    -1.12587
+2    -0.598849    -0.19446     -0.997135   -0.109897
+3    -0.581287    -1.03101     -0.235239   -1.10792
+4    -0.354632     0.0298535    0.156802   -0.747012
+5    -0.311574     0.542726     0.524616    0.0746794
+6    -0.359368     0.0343172   -0.743697   -0.869237
+7    -0.507737    -0.136907     0.380715    0.280283
+8    -0.110925     0.278195    -0.617249   -0.509287
+9    -0.0691689    0.701624     0.761656    0.771634
+10    0.235719     0.767849    -0.212423    0.420288
+;
+
+radius = 0.759003
+softness = 0.5
+
+---------------------------- Solution coords data ----------------------------
+distances [*,1,*]
+:    1   2   3   4    :=
+1    0   1   0   1
+2    0   1   0   1
+3    0   1   0   1
+4    0   1   0   1
+5    0   1   0   1
+6    0   1   0   1
+7    0   1   0   1
+8    0   1   0   1
+9    0   1   0   1
+10   0   1   0   1
+
+ [*,2,*]
+:    1   2   3   4    :=
+1    0   0   1   1
+2    0   0   1   1
+3    0   0   1   1
+4    0   0   1   1
+5    0   0   1   1
+6    0   0   1   1
+7    0   0   1   1
+8    0   0   1   1
+9    0   0   1   1
+10   0   0   1   1
+
+ [*,3,*]
+:    1   2   3   4    :=
+1    1   0   0   1
+2    1   0   0   1
+3    1   0   0   1
+4    1   0   0   1
+5    1   0   0   1
+6    1   0   0   1
+7    1   0   0   1
+8    1   0   0   1
+9    1   0   0   1
+10   1   0   0   1
+
+ [*,4,*]
+:    1   2   3   4    :=
+1    1   1   1   0
+2    1   1   1   0
+3    1   1   1   0
+4    1   1   1   0
+5    1   1   1   0
+6    1   1   1   0
+7    1   1   1   0
+8    1   1   1   0
+9    1   1   1   0
+10   1   1   1   0
+;
+
+---------------------------- Solution stats data ----------------------------
+_ampl_time = 0.008721
+_total_solve_time = 174.86
+_ampl_elapsed_time = 0.00574
+_ampl_user_time = 0.006708
+
+Total time elapsed: $174.86.
+_total_solve_time = 174.86
+
+---------------------------- Solution miscs data ----------------------------
+tetrahedron_volume [*] :=
+ 1  0.117851
+ 2  0.117851
+ 3  0.117851
+ 4  0.117851
+ 5  0.117851
+ 6  0.117851
+ 7  0.117851
+ 8  0.117851
+ 9  0.117851
+10  0.117851
+;
+
+---------------------------- Solution miscs data ----------------------------
+tetrahedron_surface_area [*] :=
+ 1  1.73205
+ 2  1.73205
+ 3  1.73205
+ 4  1.73205
+ 5  1.73205
+ 6  1.73205
+ 7  1.73205
+ 8  1.73205
+ 9  1.73205
+10  1.73205
+;
+

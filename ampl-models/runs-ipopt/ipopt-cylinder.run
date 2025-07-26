@@ -1,16 +1,5 @@
-#!/bin/sh
-# NEOS AMPL submission for IPOPT
-
-# Specify IPOPT as the solver
 option solver ipopt;
-# Set a few common IPOPT options; adjust as needed:
-option ipopt_options "\
-tol=1e-6 \
-constr_viol_tol=1e-6 \
-max_iter=10000 \
-";  # tighter tolerances, up to 10 000 iterations
 
-# Solve and dump the same outputs as before:
 solve;
 
 printf "---------------------------- Solution header data ----------------------------\n";

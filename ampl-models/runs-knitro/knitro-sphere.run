@@ -1,15 +1,5 @@
-option knitro_options "\
-algorithm=1 \
-ms_enable=1 \
-ms_maxsolves=10 \
-feastol=1e-5 \
-opttol=1e-5 \
-honorbnds=1 \
-bar_initpt=3 \
-bar_murule=4 \
-scale=1 \
-outlev=2 \
-maxtime_real=3600";
+option knitro_options "algorithm=1 ms_enable=1 ms_maxsolves=50 ms_terminate=1 ms_savetol=0.01 feastol=1e-5 opttol=1e-5 bar_initpt=3 bar_murule=6 bar_penaltyrule=2 linsolver=0 scale=3 honorbnds=1 outlev=3 maxtime_real=1200 numthreads=4 presolve=1 bar_refinement=1 debug=0";
+
 
 
 
