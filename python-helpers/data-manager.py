@@ -156,7 +156,7 @@ if __name__ == '__main__':
     main()
     
 
-#python json_list.py --input-file data.json --base-dir /path/to/project --del 15984287    
-#python json_list.py --input-file artifacts/results.json --base-dir .  --stats
-#python json_list.py --input-file artifacts/results.json --base-dir .  --prune
-#python json_list.py --input-file artifacts/results.json --base-dir .  --val
+#python data-manager.py --input-file data.json --base-dir /path/to/project --del 15984287    
+#python data-manager.py --input-file artifacts/results.json --base-dir .  --stats
+#python data-manager.py --input-file artifacts/results.json --base-dir .  --prune
+#python data-manager.py --input-file artifacts/results.json --base-dir .  --val

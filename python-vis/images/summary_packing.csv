@@ -1,0 +1,10 @@
+container,conservation,n,mean,median,sd
+cube,surface,66,0.755,0.764,0.155
+cube,volume,256,0.738,0.764,0.089
+cube,volume & surface,52,0.674,0.668,0.151
+cylinder,surface,26,0.671,0.687,0.165
+cylinder,volume,78,0.603,0.616,0.117
+cylinder,volume & surface,119,0.535,0.509,0.176
+sphere,surface,82,0.609,0.623,0.204
+sphere,volume,63,0.678,0.697,0.079
+sphere,volume & surface,76,0.425,0.469,0.085

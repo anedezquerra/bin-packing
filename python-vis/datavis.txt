@@ -1,0 +1,110 @@
+
+Cobertura por contenedor × regla:
+   container      conservation    n  valid  valid_pct
+0      cube           surface   95     66      69.47
+1      cube            volume  256    256     100.00
+2      cube  volume & surface   81     52      64.20
+3  cylinder           surface   49     26      53.06
+4  cylinder            volume   78     78     100.00
+5  cylinder  volume & surface  156    156     100.00
+6    sphere           surface  111     82      73.87
+7    sphere            volume   63     63     100.00
+8    sphere  volume & surface   76     76     100.00
+
+ANOVA (dos vías):
+                               sum_sq     df     F  PR(>F)
+C(container)                    2.96   2.00 82.73    0.00
+C(conservation)                 2.26   2.00 63.17    0.00
+C(container):C(conservation)    0.89   4.00 12.41    0.00
+Residual                       14.46 809.00   NaN     NaN
+
+Shapiro–Wilk residuales: W=0.994, p=0.0305
+Levene por contenedor: stat=36.71, p=5.44e-16
+
+Kruskal–Wallis global: H=289.97, p=5.6e-58
+
+Post hoc (Mann–Whitney + Holm) — top 15 por p_holm:
+                               A  ... p_holm
+0                 cube | volume  ...   0.00
+1                 cube | volume  ...   0.00
+2               sphere | volume  ...   0.00
+3                cube | surface  ...   0.00
+4                 cube | volume  ...   0.00
+5       cube | volume & surface  ...   0.00
+6             cylinder | volume  ...   0.00
+7                cube | surface  ...   0.00
+8                 cube | volume  ...   0.00
+9              sphere | surface  ...   0.00
+10           cylinder | surface  ...   0.00
+11               cube | surface  ...   0.00
+12                cube | volume  ...   0.00
+13  cylinder | volume & surface  ...   0.00
+14  cylinder | volume & surface  ...   0.00
+
+[15 rows x 5 columns]
+
+Modelo explicativo (OLS):
+                             OLS Regression Results                            
+==============================================================================
+Dep. Variable:          packing_ratio   R-squared:                       0.622
+Model:                            OLS   Adj. R-squared:                  0.618
+Method:                 Least Squares   F-statistic:                     133.0
+Date:                Tue, 09 Sep 2025   Prob (F-statistic):          3.70e-163
+Time:                        10:39:02   Log-Likelihood:                 699.04
+No. Observations:                 818   AIC:                            -1376.
+Df Residuals:                     807   BIC:                            -1324.
+Df Model:                          10                                         
+Covariance Type:            nonrobust                                         
+================================================================================================================================
+                                                                   coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                        0.5986      0.014     41.479      0.000       0.570       0.627
+C(container)[T.cylinder]                                        -0.0945      0.024     -3.937      0.000      -0.142      -0.047
+C(container)[T.sphere]                                          -0.1486      0.017     -8.649      0.000      -0.182      -0.115
+C(conservation)[T.volume]                                       -0.0870      0.015     -5.946      0.000      -0.116      -0.058
+C(conservation)[T.volume & surface]                             -0.0853      0.019     -4.416      0.000      -0.123      -0.047
+C(container)[T.cylinder]:C(conservation)[T.volume]               0.0114      0.028      0.410      0.682      -0.043       0.066
+C(container)[T.sphere]:C(conservation)[T.volume]                 0.0467      0.023      2.049      0.041       0.002       0.091
+C(container)[T.cylinder]:C(conservation)[T.volume & surface]    -0.0972      0.030     -3.272      0.001      -0.155      -0.039
+C(container)[T.sphere]:C(conservation)[T.volume & surface]      -0.1165      0.025     -4.590      0.000      -0.166      -0.067
+items                                                            0.0018      0.000     15.168      0.000       0.002       0.002
+softness                                                         0.2345      0.013     17.853      0.000       0.209       0.260
+==============================================================================
+Omnibus:                        3.297   Durbin-Watson:                   1.476
+Prob(Omnibus):                  0.192   Jarque-Bera (JB):                3.600
+Skew:                          -0.049   Prob(JB):                        0.165
+Kurtosis:                       3.310   Cond. No.                         800.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+GLM Binomial (valid_result):
+                  Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:               is_valid   No. Observations:                  965
+Model:                            GLM   Df Residuals:                      954
+Model Family:                Binomial   Df Model:                           10
+Link Function:                  Logit   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -73.087
+Date:                Tue, 09 Sep 2025   Deviance:                       146.17
+Time:                        10:39:02   Pearson chi2:                     199.
+No. Iterations:                    26   Pseudo R-squ. (CS):             0.4277
+Covariance Type:            nonrobust                                         
+================================================================================================================================
+                                                                   coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                       11.8038      1.520      7.768      0.000       8.826      14.782
+C(container)[T.cylinder]                                        -0.3676      0.653     -0.563      0.573      -1.647       0.912
+C(container)[T.sphere]                                           1.8041      0.582      3.098      0.002       0.663       2.945
+C(conservation)[T.volume]                                       30.9778   2.75e+04      0.001      0.999    -5.4e+04     5.4e+04
+C(conservation)[T.volume & surface]                             -0.5346      0.593     -0.902      0.367      -1.697       0.628
+C(container)[T.cylinder]:C(conservation)[T.volume]              -0.4034   5.56e+04  -7.26e-06      1.000   -1.09e+05    1.09e+05
+C(container)[T.sphere]:C(conservation)[T.volume]                -1.2704   6.29e+04  -2.02e-05      1.000   -1.23e+05    1.23e+05
+C(container)[T.cylinder]:C(conservation)[T.volume & surface]    31.5663   3.47e+04      0.001      0.999    -6.8e+04    6.81e+04
+C(container)[T.sphere]:C(conservation)[T.volume & surface]      28.0119   5.07e+04      0.001      1.000   -9.93e+04    9.93e+04
+items                                                           -0.0354      0.008     -4.433      0.000      -0.051      -0.020
+softness                                                       -15.4370      1.918     -8.048      0.000     -19.196     -11.678
+================================================================================================================================
+
+Tablas exportadas en 'figs/': summary_packing.csv y summary_packing.tex
